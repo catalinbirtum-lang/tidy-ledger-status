@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="dark">
+<title>BUSINESS CONTROL BRAIN</title>
+<style>
+:root{--bg:#04060c;--bg2:#070b16;--panel:rgba(12,18,32,.86);--panel2:rgba(18,27,48,.9);--line:#1a2a46;--line2:#25406b;--tx:#dbe6fa;--mut:#8ea0c0;--cy:#3de0ff;--vi:#8b7bff;--ok:#2fe08a;--warn:#ffb52e;--bad:#ff5470;--unk:#6f7d96;--info:#5aa0ff;--r:14px;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;overflow-wrap:anywhere;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;
+background-image:radial-gradient(1200px 600px at 15% -10%,rgba(61,224,255,.10),transparent 60%),radial-gradient(900px 500px at 95% 5%,rgba(139,123,255,.12),transparent 60%),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><g stroke='%231a2a46' stroke-width='1' fill='none' opacity='.55'><path d='M10 40 L80 90 L150 30 L210 100 M80 90 L60 180 L140 200 L210 100 M150 30 L190 10 M60 180 L10 150'/></g><g fill='%2325406b'><circle cx='10' cy='40' r='2.2'/><circle cx='80' cy='90' r='2.6'/><circle cx='150' cy='30' r='2.2'/><circle cx='210' cy='100' r='2.4'/><circle cx='60' cy='180' r='2.2'/><circle cx='140' cy='200' r='2.4'/></g></svg>");background-attachment:fixed}
+a{color:var(--cy);text-decoration:none;overflow-wrap:anywhere}a:hover{text-decoration:underline}
+.wrap{max-width:1360px;margin:0 auto;padding:12px 16px 40px}
+header.top{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between;padding:14px 4px 10px;border-bottom:1px solid var(--line)}
+.brand h1{margin:0;font-size:clamp(18px,3.2vw,28px);letter-spacing:.18em;font-weight:700;background:linear-gradient(90deg,var(--cy),var(--vi));-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand p{margin:2px 0 0;color:var(--mut);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid var(--line2);border-radius:999px;background:var(--panel);font-size:13px;white-space:nowrap}
+.chip b{font-family:var(--mono);font-weight:600}
+.light{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--unk);box-shadow:0 0 0 2px rgba(255,255,255,.04);flex:none}
+.light.ok{background:var(--ok);box-shadow:0 0 8px rgba(47,224,138,.55)}
+.light.warn,.light.attention{background:var(--warn);box-shadow:0 0 8px rgba(255,181,46,.5)}
+.light.blocked,.light.stale{background:var(--bad);box-shadow:0 0 8px rgba(255,84,112,.55)}
+.light.unverified,.light.info,.light.waiting{background:var(--info)}
+.light.idle,.light.unknown{background:var(--unk)}
+.light.in_progress{background:var(--cy);box-shadow:0 0 8px rgba(61,224,255,.6)}
+.light.live{animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(61,224,255,.7)}50%{box-shadow:0 0 0 7px rgba(61,224,255,0)}}
+@media (prefers-reduced-motion:reduce){.light.live{animation:none}}
+.banner{margin:12px 0 0;padding:12px 14px;border-radius:var(--r);border:1px solid var(--bad);background:rgba(255,84,112,.10);font-size:14px}
+.banner.warn{border-color:var(--warn);background:rgba(255,181,46,.10)}
+.banner.info{border-color:var(--info);background:rgba(90,160,255,.08)}
+.banner strong{letter-spacing:.04em}
+#hier{display:grid;grid-template-columns:1fr;gap:0;margin:16px 0 4px}
+.node{position:relative;background:var(--panel);border:1px solid var(--line2);border-radius:var(--r);padding:12px 14px;margin-bottom:22px}
+.node:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-22px;width:2px;height:22px;background:linear-gradient(var(--line2),var(--cy))}
+.node .lvl{font-size:11px;letter-spacing:.2em;color:var(--cy);font-weight:700}
+.node .nm{font-weight:600;margin:2px 0}
+.node .hd{display:flex;align-items:center;gap:8px;font-size:14px}
+.node .dt{color:var(--mut);font-size:12.5px;margin-top:4px;overflow-wrap:anywhere}
+.node .kv{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.kvp{font-size:12px;border:1px solid var(--line);border-radius:8px;padding:3px 8px;background:var(--bg2)}
+.kvp b{font-family:var(--mono)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:10px}
+.card{grid-column:span 12;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;min-width:0;backdrop-filter:blur(4px)}
+.card>h2{margin:0 0 10px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--cy);display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.card>h2 .no{font-family:var(--mono);color:var(--vi)}
+.card>h2 .sub{margin-left:auto;font-size:11px;color:var(--mut);letter-spacing:.04em;text-transform:none}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}
+.metric{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-width:0}
+.metric .t{font-size:12px;color:var(--mut)}
+.metric .v{font-family:var(--mono);font-size:26px;font-weight:700;line-height:1.2;margin:2px 0;overflow-wrap:anywhere}
+.metric .v.unk{color:var(--unk);font-size:20px;letter-spacing:.06em}
+.metric .f{font-size:11px;color:var(--mut);margin-top:4px;overflow-wrap:anywhere}
+.metric .n{font-size:11.5px;color:#a9b6cf;margin-top:3px}
+.pill{display:inline-block;font-size:10.5px;letter-spacing:.08em;font-weight:700;padding:1px 7px;border-radius:999px;border:1px solid var(--line2);vertical-align:middle}
+.pill.FACT{color:var(--ok);border-color:rgba(47,224,138,.5)}
+.pill.ESTIMATE{color:var(--warn);border-color:rgba(255,181,46,.5)}
+.pill.UNKNOWN{color:var(--mut);border-color:var(--unk)}
+.pill.STALE{color:#fff;background:var(--bad);border-color:var(--bad)}
+.pill.sev-high,.pill.sev-critical{color:var(--bad);border-color:var(--bad)}
+.pill.sev-medium{color:var(--warn);border-color:var(--warn)}
+.pill.sev-low,.pill.sev-info{color:var(--info);border-color:var(--info)}
+.pill.TARGET{color:var(--vi);border-color:var(--vi)}
+.chan{margin-top:12px}
+.chan h3{margin:0 0 6px;font-size:13px;color:var(--tx);display:flex;gap:8px;align-items:center}
+.bar{height:8px;background:#0c1426;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--cy),var(--vi))}
+.big{font-family:var(--mono);font-size:clamp(34px,7vw,56px);font-weight:800;line-height:1;background:linear-gradient(90deg,var(--cy),var(--vi));-webkit-background-clip:text;background-clip:text;color:transparent}
+.muted{color:var(--mut)}.small{font-size:12px}
+.row{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row .main{flex:1;min-width:0}
+.row .ttl{font-weight:600;overflow-wrap:anywhere}
+.steps{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.step{font-size:11px;letter-spacing:.06em;padding:3px 9px;border:1px solid var(--line);border-radius:999px;color:var(--mut)}
+.step.on{color:#04121a;background:var(--cy);border-color:var(--cy);font-weight:700}
+.step.done{color:var(--ok);border-color:var(--ok)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:6px 6px;border-top:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere;word-break:break-word}
+table{table-layout:auto;max-width:100%}
+.scroll{overflow-x:auto;max-width:100%}
+th{color:var(--mut);font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.tl{list-style:none;margin:0;padding:0 0 0 14px;border-left:2px solid var(--line2)}
+.tl li{position:relative;padding:0 0 12px 14px}
+.tl li::before{content:"";position:absolute;left:-21px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--cy)}
+.tl .ts{font-family:var(--mono);font-size:12px;color:var(--vi)}
+details{margin-top:8px}
+summary{cursor:pointer;color:var(--cy);font-size:13px;padding:6px 0}
+.lk{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;padding:3px 0;font-size:13px}
+.lk .st{font-size:11px;color:var(--mut)}
+.lk .st.ok{color:var(--ok)}.lk .st.bad{color:var(--bad)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:6px}
+.radar svg{width:100%;height:auto;background:rgba(5,9,18,.6);border:1px solid var(--line);border-radius:12px}
+.rcard{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-top:8px;background:var(--panel2)}
+.rcard .rt{font-weight:600}
+.rcard dl{display:grid;grid-template-columns:110px 1fr;gap:3px 10px;margin:6px 0 0;font-size:13px}
+.rcard dt{color:var(--mut)}.rcard dd{margin:0;overflow-wrap:anywhere}
+footer{margin-top:24px;color:var(--mut);font-size:12px;border-top:1px solid var(--line);padding-top:12px}
+#err{display:none}
+.center{text-align:center}
+@media (min-width:900px){
+ #hier{grid-template-columns:repeat(5,1fr);gap:26px}
+ .node{margin-bottom:0}
+ .node:not(:last-child)::after{left:auto;right:-26px;bottom:auto;top:50%;width:26px;height:2px;background:linear-gradient(90deg,var(--line2),var(--cy))}
+ .s6{grid-column:span 6}.s4{grid-column:span 4}.s8{grid-column:span 8}.s5{grid-column:span 5}.s7{grid-column:span 7}
+}
+@media (max-width:480px){.wrap{padding:8px 10px 32px}.chip{white-space:normal}.metric .v{font-size:22px}.rcard dl{grid-template-columns:1fr}}
+.owner{margin:14px 0 6px;padding:16px;border:1px solid var(--line2);border-radius:var(--r);background:linear-gradient(180deg,rgba(18,27,48,.95),rgba(8,12,22,.92))}
+.owner h2{margin:0 0 4px;font-size:clamp(18px,3vw,24px);letter-spacing:.04em}
+.owner .osub{color:var(--mut);font-size:13px;margin-bottom:12px}
+.owner .oupdated{font-family:var(--mono);font-size:13px;color:var(--vi);margin-bottom:14px}
+.owner .osec{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.owner .osec h3{margin:0 0 8px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--cy)}
+.owner .olist{margin:0;padding:0;list-style:none}
+.owner .olist li{padding:6px 0;border-top:1px solid var(--line);font-size:14px}
+.owner .olist li:first-child{border-top:0}
+.owner .otag{display:inline-block;min-width:7.5rem;color:var(--mut);font-size:12px}
+.owner .oval{font-family:var(--mono);font-weight:700}
+.owner a.opage{display:block;padding:4px 0;font-size:13px;overflow-wrap:anywhere}
+.owner .okill{margin-top:6px;font-size:12px;color:var(--warn)}
+.owner .ocols{display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:800px){.owner .ocols{grid-template-columns:1fr 1fr 1fr}}
+.owner .obox{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.owner .obox h4{margin:0 0 6px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--vi)}
+details.advanced{margin-top:18px}
+details.advanced>summary{cursor:pointer;color:var(--mut);font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:8px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+ <div class="brand"><h1>BUSINESS CONTROL BRAIN</h1><p id="subtitle">Cum merge afacerea · How the business is doing</p></div>
+ <div class="chips" id="topchips"></div>
+</header>
+<div id="banners"></div>
+<div id="owner"></div>
+<noscript><div class="banner"><strong>JavaScript is required.</strong> This page renders everything from public_status.json.</div></noscript>
+<div id="err" class="banner"></div>
+<section id="hier" aria-label="Hierarchy: owner, CEO, business, distribution, results"></section>
+<div class="grid" id="grid"></div>
+<footer id="foot"></footer>
+</div>
+<script src="./config.js"></script>
+<script src="./public_status.js" onerror="void 0"></script>
+<script>
+(function(){
+"use strict";
+var CFG = window.TL_CONFIG || {SNAPSHOT_URLS:["./public_status.json"],SNAPSHOT_STALE_HOURS:6,REFETCH_MINUTES:5};
+var TZ = "Europe/London";
+var SNAP = null, SOURCE = null, TRIED = [];
+
+/* ---------- tiny DOM helper (textContent only: snapshot text is never parsed as HTML) ---------- */
+function h(tag, props){
+  var el = document.createElement(tag);
+  if(props){ for(var k in props){ var v = props[k]; if(v==null||v===false) continue;
+    if(k==="class") el.className = v; else if(k==="text") el.textContent = v; else el.setAttribute(k, v===true?"":v); } }
+  for(var i=2;i<arguments.length;i++){ add(el, arguments[i]); }
+  return el;
+}
+function add(el, c){ if(c==null||c===false) return; if(Array.isArray(c)){ c.forEach(function(x){add(el,x);}); }
+  else el.appendChild(typeof c==="string"||typeof c==="number" ? document.createTextNode(String(c)) : c); }
+function clear(el){ while(el.firstChild) el.removeChild(el.firstChild); }
+function $(s){ return document.querySelector(s); }
+
+/* ---------- time helpers (everything shown in Europe/London) ---------- */
+function ms(iso){ var t = Date.parse(iso); return isNaN(t) ? null : t; }
+function fmtDT(iso){ var t = ms(iso); if(t==null) return "UNKNOWN";
+  return new Intl.DateTimeFormat("en-GB",{timeZone:TZ,weekday:"short",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit",hour12:false}).format(new Date(t)) + " " + tzName(t); }
+function tzName(t){ var p = new Intl.DateTimeFormat("en-GB",{timeZone:TZ,timeZoneName:"short"}).formatToParts(new Date(t)).filter(function(x){return x.type==="timeZoneName";})[0]; return p?p.value:"UK"; }
+function fmtHM(t){ return new Intl.DateTimeFormat("en-GB",{timeZone:TZ,hour:"2-digit",minute:"2-digit",hour12:false}).format(new Date(t)); }
+function ymdLondon(t){ return new Intl.DateTimeFormat("en-CA",{timeZone:TZ,year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date(t)); }
+function dayDiff(a,b){ var A = a.split("-").map(Number), B = b.split("-").map(Number); return Math.round((Date.UTC(A[0],A[1]-1,A[2])-Date.UTC(B[0],B[1]-1,B[2]))/86400000); }
+function ago(t, now){ var s = Math.floor(((now||Date.now())-t)/1000); if(s<-60) return "in the future (clock skew?)"; s=Math.max(s,0);
+  var d=Math.floor(s/86400), hh=Math.floor(s%86400/3600), m=Math.floor(s%3600/60);
+  if(d) return d+"d "+hh+"h ago"; if(hh) return hh+"h "+m+"m ago"; if(m) return m+"m ago"; return "just now"; }
+function ageH(iso){ var t = ms(iso); return t==null ? null : (Date.now()-t)/3600000; }
+
+/* ---------- value formatting: UNKNOWN is never shown as 0 ---------- */
+function fmtVal(m){
+  if(!m || m.value===null || m.value===undefined) return {t:"UNKNOWN", unk:true};
+  if(m.unit==="gbp") return {t:"£"+Number(m.value).toLocaleString("en-GB",{minimumFractionDigits:2,maximumFractionDigits:2})};
+  if(typeof m.value==="number") return {t:m.value.toLocaleString("en-GB")};
+  return {t:String(m.value)};
+}
+function pill(label){ return h("span",{class:"pill "+label,text:label}); }
+function lightEl(state, live){ return h("span",{class:"light "+state+(live?" live":""),title:state}); }
+function staleMetric(m){ if(!m||m.value==null||!m.as_of) return false; var a = ageH(m.as_of); var lim = m.stale_after_hours || (SNAP.freshness&&SNAP.freshness.metric_default_stale_after_hours) || 24; return a!=null && a>lim; }
+
+function metricCard(key, opts){
+  var m = SNAP.metrics[key]; if(!m) return h("div",{class:"metric"},h("div",{class:"t",text:key}),h("div",{class:"v unk",text:"UNKNOWN"}),h("div",{class:"f",text:"metric missing from snapshot"}));
+  var v = fmtVal(m);
+  return h("div",{class:"metric",id:"m-"+key},
+    h("div",{class:"t",text:m.title}),
+    h("div",{class:"v"+(v.unk?" unk":""),"data-metric":key,text:v.t}),
+    h("div",null,pill(m.label)," ",staleMetric(m)?h("span",{class:"pill STALE",title:"older than "+(m.stale_after_hours||24)+" h",text:"STALE"}):null),
+    m.note?h("div",{class:"n",text:m.note}):null,
+    h("div",{class:"f",text:"source: "+m.source}),
+    h("div",{class:"f",text:"as of "+(m.as_of?fmtDT(m.as_of)+" ("+ago(ms(m.as_of))+")":"UNKNOWN")}));
+}
+function chipMetric(key){ var m = SNAP.metrics[key]; var v = fmtVal(m); return h("span",{class:"kvp"}, (m?m.title:key)+": ", h("b",{text:v.t}), " ", pill(m?m.label:"UNKNOWN")); }
+
+/* ---------- freshness ---------- */
+function freshness(){
+  var t = ms(SNAP.generated_at), lim = (SNAP.freshness&&SNAP.freshness.snapshot_stale_after_hours) || CFG.SNAPSHOT_STALE_HOURS || 6;
+  var age = t==null ? null : (Date.now()-t)/3600000;
+  return {t:t, age:age, limit:lim, stale: age==null || age>lim, skew: age!=null && age < -0.1};
+}
+function nextSync(){
+  var sched = (SNAP.freshness&&SNAP.freshness.sync_schedule_uk)||[]; var now = Date.now(); var best=null;
+  [0,1].forEach(function(d){ sched.forEach(function(hm){
+    var base = ymdLondon(now + d*86400000); var p = hm.split(":");
+    var guess = Date.parse(base+"T"+hm+":00Z"); /* London offset search */
+    for(var off=-120; off<=60; off+=60){ var c = guess+off*60000; var s = new Intl.DateTimeFormat("en-GB",{timeZone:TZ,hour:"2-digit",minute:"2-digit",hour12:false}).format(new Date(c));
+      if(s===hm && ymdLondon(c)===base){ if(c>now && (best==null||c<best)) best=c; } } }); });
+  return best;
+}
+function lastExpected(){
+  var sched = (SNAP.freshness&&SNAP.freshness.sync_schedule_uk)||[]; var now = Date.now(); var best=null;
+  [-1,0].forEach(function(d){ sched.forEach(function(hm){
+    var base = ymdLondon(now + d*86400000); var guess = Date.parse(base+"T"+hm+":00Z");
+    for(var off=-120; off<=60; off+=60){ var c = guess+off*60000; var s = new Intl.DateTimeFormat("en-GB",{timeZone:TZ,hour:"2-digit",minute:"2-digit",hour12:false}).format(new Date(c));
+      if(s===hm && ymdLondon(c)===base && c<=now && (best==null||c>best)) best=c; } }); });
+  return best;
+}
+function dayInfo(){
+  var C = SNAP.challenge, today = ymdLondon(Date.now()), day = dayDiff(today, C.start_date)+1, tot = C.total_days;
+  if(day<1) return {txt:"PRE-LAUNCH", day:day, tot:tot, pct:0, status:"pre-launch"};
+  if(day>tot) return {txt:"ENDED", day:tot, tot:tot, pct:100, status:"ended"};
+  return {txt:"DAY "+day+" / "+tot, day:day, tot:tot, pct:Math.round(day/tot*100), status:"running"};
+}
+
+/* ---------- owner-simple (Catalin first view) ---------- */
+function fmtMoney(m){
+  if(!m || m.value===null || m.value===undefined) return "UNKNOWN";
+  if(m.unit==="gbp" || (typeof m.value==="number" && /gbp|£|earnings|revenue|spend|cash|capital|profit|sales/i.test(m.title||m.title_en||""))){
+    return "£" + Number(m.value).toLocaleString("en-GB",{minimumFractionDigits:0,maximumFractionDigits:2});
+  }
+  return String(m.value);
+}
+function ownerMetricLine(ro, en, m){
+  var lab = (m && m.label) ? m.label : "UNKNOWN";
+  var val = (m && (m.value!==null && m.value!==undefined)) ? (m.unit==="gbp" || /gbp|capital|cash|spend|revenue|profit|earnings|sales/i.test(en||"") ? "£"+Number(m.value).toLocaleString("en-GB",{minimumFractionDigits:0,maximumFractionDigits:2}) : String(m.value)) : (m && m.value===0 ? "0" : "UNKNOWN");
+  // value 0 is valid FACT
+  if(m && m.value===0) val = (m.unit==="gbp" || /gbp|capital|cash|spend|revenue|profit|earnings|sales/i.test(en||"")) ? "£0" : "0";
+  if(m && (m.value===null || m.value===undefined) && lab==="UNKNOWN") val = "UNKNOWN";
+  return h("li",null,
+    h("span",{class:"otag",text:ro+" ("+en+")"}),
+    " ", h("span",{class:"oval",text:val}), " ", pill(lab));
+}
+function sOwner(){
+  var O = SNAP.owner_simple; if(!O) return h("div",{id:"owner-missing",class:"banner warn"}, h("strong",{text:"Owner view missing"}), document.createTextNode(" — rebuild with brain/build_snapshot.py"));
+  var S = O.sections || {};
+  var root = h("section",{class:"owner","aria-label":"Owner business status"});
+  root.appendChild(h("h2",{text:(O.title_ro||"Status")+" / "+(O.title_en||"Status")}));
+  root.appendChild(h("div",{class:"osub",text:(O.subtitle_ro||"")+" "+(O.subtitle_en||"")}));
+  root.appendChild(h("div",{class:"oupdated",text:(O.last_updated_label_ro||"Ultima actualizare")+" / "+(O.last_updated_label_en||"Last updated")+": "+fmtDT(O.last_updated)+" (BST/UK)"}));
+
+  // Money
+  var money = S.money || {};
+  var msec = h("div",{class:"osec"}, h("h3",{text:(money.title_ro||"Bani")+" ("+(money.title_en||"Money")+")"}));
+  var ul = h("ul",{class:"olist"});
+  (money.items||[]).forEach(function(it){
+    ul.appendChild(ownerMetricLine(it.title_ro||it.title_en, it.title_en||"", it));
+  });
+  msec.appendChild(ul);
+  if(money.rule) msec.appendChild(h("div",{class:"small muted",text:money.rule}));
+  root.appendChild(msec);
+
+  // Amazon
+  var A = S.amazon || {};
+  var asec = h("div",{class:"osec"}, h("h3",{text:(A.title_ro||"Amazon Associates UK")+" — store "+(A.store_id||"?")}));
+  var aul = h("ul",{class:"olist"});
+  aul.appendChild(ownerMetricLine("Click-uri","Clicks", A.clicks));
+  aul.appendChild(ownerMetricLine("Articole comandate","Ordered items", A.ordered_items));
+  aul.appendChild(ownerMetricLine("Câștiguri","Earnings", A.earnings_gbp));
+  asec.appendChild(aul);
+  if(A.baseline_note) asec.appendChild(h("div",{class:"small muted",text:A.baseline_note}));
+  root.appendChild(asec);
+
+  // Live pages
+  var L = S.live_pages || {};
+  var lsec = h("div",{class:"osec"}, h("h3",{text:(L.title_ro||"Pagini live")+" ("+(L.title_en||"Live pages")+")"}));
+  (L.pages||[]).forEach(function(p){
+    var st = p.http==null ? "UNKNOWN" : ("HTTP "+p.http+(p.state==="ok"?" ✓":""));
+    lsec.appendChild(h("a",{class:"opage",href:p.url,target:"_blank",rel:"noopener noreferrer"}, p.path+" — ", h("span",{class:"st "+(p.state==="ok"?"ok":"bad"),text:st})));
+  });
+  root.appendChild(lsec);
+
+  // TikTok
+  var T = S.tiktok || {};
+  var tsec = h("div",{class:"osec"}, h("h3",{text:(T.title_ro||"TikTok")+" "+(T.handle||"")}));
+  var tul = h("ul",{class:"olist"});
+  tul.appendChild(h("li",null, h("span",{class:"otag",text:"Postări (Posts)"}), " ", h("span",{class:"oval",text:String(T.posts_live==null?"UNKNOWN":T.posts_live)}), " ", pill(T.posts_label||"FACT")));
+  var fol = (T.followers===null||T.followers===undefined) ? "UNKNOWN" : String(T.followers);
+  tul.appendChild(h("li",null, h("span",{class:"otag",text:"Urmăritori (Followers)"}), " ", h("span",{class:"oval",text:fol}), " ", pill(T.followers_label||"UNKNOWN")));
+  tsec.appendChild(tul);
+  var pipe = T.pipeline || {};
+  if(pipe.batches && pipe.batches.length){
+    var pb = h("div",{class:"small muted",text:"Pipeline video: "+(pipe.clips_rendered_total||0)+" clipuri randate ("+(pipe.batches.map(function(b){return b.id+":"+b.clips_rendered;}).join(", "))+"). "+(pipe.posting_status||"")});
+    tsec.appendChild(pb);
+  }
+  root.appendChild(tsec);
+
+  // Pinterest
+  var P = S.pinterest || {};
+  var psec = h("div",{class:"osec"}, h("h3",{text:(P.title_ro||"Pinterest")+" ("+(P.title_en||"Pinterest")+")"}));
+  var pul = h("ul",{class:"olist"});
+  pul.appendChild(h("li",null, h("span",{class:"otag",text:"Pinuri live (Pins live)"}), " ", h("span",{class:"oval",text:String(P.pins_live==null?"UNKNOWN":P.pins_live)}), " ", pill(P.label||"FACT"), P.pins_live_note?h("span",{class:"small muted",text:" — "+P.pins_live_note}):null));
+  pul.appendChild(h("li",null, h("span",{class:"otag",text:"Pinuri în coadă (Queued)"}), " ", h("span",{class:"oval",text:String(P.pins_queued==null?"UNKNOWN":P.pins_queued)}), " ", pill(P.label||"FACT"), P.pins_queued_note?h("span",{class:"small muted",text:" — "+P.pins_queued_note}):null));
+  psec.appendChild(pul);
+  root.appendChild(psec);
+
+  // Payhip
+  var Y = S.payhip || {};
+  var ysec = h("div",{class:"osec"}, h("h3",{text:(Y.title_ro||"Payhip")+" ("+(Y.title_en||"Payhip")+")"}));
+  var yul = h("ul",{class:"olist"});
+  yul.appendChild(ownerMetricLine("Produse","Products", Y.products));
+  yul.appendChild(ownerMetricLine("Vizualizări","Views", Y.views));
+  yul.appendChild(ownerMetricLine("Vânzări / comenzi","Sales / orders", Y.orders));
+  yul.appendChild(ownerMetricLine("Încasări","Sales £", Y.sales_gbp));
+  ysec.appendChild(yul);
+  if(Y.kill_date) ysec.appendChild(h("div",{class:"okill",text:"Kill date: "+Y.kill_date+(Y.kill_note?" — "+Y.kill_note:"")}));
+  root.appendChild(ysec);
+
+  // NOW / NEXT / Owner
+  var Q = S.queue || {};
+  var qsec = h("div",{class:"osec"}, h("h3",{text:(Q.title_ro||"ACUM / URMĂTOR")+" ("+(Q.title_en||"NOW / NEXT / Owner")+")"}));
+  var cols = h("div",{class:"ocols"});
+  function box(title, items){
+    var b = h("div",{class:"obox"}, h("h4",{text:title}));
+    var list = h("ul",{class:"olist"});
+    (items||[]).forEach(function(it){
+      list.appendChild(h("li",null, h("div",{class:"ttl",text:it.title||""}), it.detail?h("div",{class:"small muted",text:it.detail}):null));
+    });
+    if(!(items||[]).length) list.appendChild(h("li",{class:"muted",text:"(none)"}));
+    b.appendChild(list); return b;
+  }
+  cols.appendChild(box("ACUM (NOW)", Q.now));
+  cols.appendChild(box("URMĂTOR (NEXT)", Q.next));
+  cols.appendChild(box("Pentru Catalin (Owner)", Q.owner_actions));
+  qsec.appendChild(cols);
+  root.appendChild(qsec);
+  return root;
+}
+
+/* ---------- section scaffolding ---------- */
+var NO = 0;
+function card(id, title, span, subtitle){ NO++; var no = String(NO).padStart(2,"0");
+  return h("section",{class:"card "+(span||""),id:"sec-"+no,"data-sec":id},
+    h("h2",null,h("span",{class:"no",text:no}),h("span",{text:title}),subtitle?h("span",{class:"sub",text:subtitle}):null)); }
+
+function linkRow(it, label){
+  var lc = it.link_check||{}; var st = lc.state||"none"; var txt, cls="";
+  if(st==="ok"){ txt="HTTP "+lc.http+" at "+(lc.checked_at?fmtHM(ms(lc.checked_at)):"?"); cls="ok"; }
+  else if(st==="not_checkable_from_box"){ txt="not checkable from box (HTTP "+(lc.http||"blocked")+")"; }
+  else if(st==="broken"){ txt="BROKEN (HTTP "+lc.http+")"; cls="bad"; }
+  else if(st==="unreachable"){ txt="unreachable from box"; cls="bad"; }
+  else if(st==="unprobed"){ txt="not probed"; }
+  else txt="not checked";
+  var a = it.url && /^https:\/\//.test(it.url) ? h("a",{href:it.url,target:"_blank",rel:"noopener noreferrer",text:label||it.name}) : h("span",{text:(label||it.name)+" (no link recorded)"});
+  return h("div",{class:"lk"},a,h("span",{class:"st "+cls,text:txt}));
+}
+
+/* ---------- renderers ---------- */
+function renderHierarchy(){
+  var box = $("#hier"); clear(box); var F = freshness();
+  SNAP.hierarchy.forEach(function(n){
+    var live = n.state==="in_progress" && !F.stale;
+    var state = (n.state==="in_progress" && F.stale) ? "stale" : n.state;
+    var stext = {in_progress: live?"IN PROGRESS (recorded)":"IN PROGRESS per last sync (STALE)",ok:"OK",attention:"NEEDS ATTENTION",blocked:"BLOCKED",waiting:"WAITING",idle:"IDLE",info:"",unknown:"UNKNOWN"}[n.state];
+    box.appendChild(h("div",{class:"node","data-level":n.level},
+      h("div",{class:"lvl",text:n.level}),
+      h("div",{class:"nm",text:n.name}),
+      h("div",{class:"hd"},lightEl(state,live),h("span",{text:(stext?stext+" · ":"")+n.headline})),
+      n.detail?h("div",{class:"dt",text:n.detail}):null,
+      n.metric_keys?h("div",{class:"kv"},n.metric_keys.map(chipMetric)):null));
+  });
+}
+
+function renderTop(){
+  var F = freshness(), D = dayInfo(), box = $("#topchips"); clear(box);
+  $("#subtitle").textContent = "Tidy Ledger UK · read-only business status";
+  box.appendChild(h("span",{class:"chip",id:"chip-day"},h("b",{text:D.txt})));
+  box.appendChild(h("span",{class:"chip",id:"chip-sync"},lightEl(F.stale?"stale":"ok",false),
+    h("span",{text:F.t==null?"Sync time UNKNOWN":("Last sync "+fmtHM(F.t)+" "+tzName(F.t)+" · "+ago(F.t))}),
+    F.stale?h("b",{text:"STALE"}):null));
+}
+
+function renderBanners(){
+  var F = freshness(), box = $("#banners"); clear(box);
+  if(F.stale){
+    box.appendChild(h("div",{class:"banner",id:"stale-warning",role:"alert"},h("strong",{text:"STALE DATA. "}),
+      F.t==null ? "The snapshot has no readable generated_at time." :
+      ("This snapshot was generated "+fmtDT(SNAP.generated_at)+" ("+ago(F.t)+"); the limit is "+F.limit+" h. Every figure below may be out of date. The next scheduled refresh is shown in section 13.")));
+  }
+  if(F.skew) box.appendChild(h("div",{class:"banner warn",id:"skew-warning"},h("strong",{text:"CLOCK MISMATCH. "}),"The snapshot is dated later than this device's clock; ages may be wrong."));
+  var le = lastExpected();
+  if(le && F.t!=null && F.t < le - 60000 && (Date.now()-le) > 40*60000 && !F.stale)
+    box.appendChild(h("div",{class:"banner warn",id:"overdue-warning"},h("strong",{text:"SYNC OVERDUE. "}),"The scheduled sync at "+fmtHM(le)+" has not produced a newer snapshot yet."));
+  if(SOURCE && /bundled/.test(SOURCE) && TRIED.some(function(x){return x.ok===false && /^https:/.test(x.url);}) && TRIED.every(function(x){return !x.ok;}))
+    box.appendChild(h("div",{class:"banner info",id:"bundled-note"},h("strong",{text:"Bundled snapshot. "}),"No network copy could be loaded, so this page shows the copy bundled with it (true to its own generated_at time above)."));
+}
+
+function sMoney(){
+  var c = card("money","Revenue, spend and budget","s7"); var g = h("div",{class:"mgrid"});
+  SNAP.layout.finance.forEach(function(k){ g.appendChild(metricCard(k)); }); c.appendChild(g);
+  c.appendChild(h("p",{class:"small muted",text:"Budget cap and spend come from the ledger; orders and customers from Payhip and Fiverr dashboards. UNKNOWN means not measured, never zero."}));
+  return c;
+}
+function sClock(){
+  var c = card("clock","Challenge clock","s5"); var D = dayInfo(), C = SNAP.challenge;
+  c.appendChild(h("div",{class:"big",id:"day-big",text:D.txt}));
+  c.appendChild(h("div",{class:"bar",style:"margin:10px 0"},h("i",{style:"width:"+D.pct+"%"})));
+  var left = D.status==="running" ? (D.tot-D.day) : 0;
+  c.appendChild(h("div",{class:"small muted",id:"day-sub"}, "Day 1 = "+C.start_date+" · Day "+C.total_days+" = "+C.end_date+" · "+(D.status==="running"?(left+" days left after today"):D.status)+" · computed from this device's clock in "+C.timezone));
+  c.appendChild(h("div",{class:"small muted",id:"day-snap"},"Snapshot said day "+C.day_number_at_sync+" at sync · ",pill(C.label)));
+  return c;
+}
+function sTraffic(){
+  var c = card("traffic","Traffic and traction","s12"); c.classList.add("s12");
+  SNAP.layout.traffic.forEach(function(ch){ var ds = SNAP.system_health.filter(function(x){return x.name.toLowerCase().indexOf(ch.channel.split(" ")[0].toLowerCase())===0;})[0];
+    var wrap = h("div",{class:"chan"},h("h3",null,ds?lightEl(ds.state):null,h("span",{text:ch.channel})), h("div",{class:"mgrid"},ch.keys.map(function(k){return metricCard(k);}))); c.appendChild(wrap); });
+  return c;
+}
+function sNow(){
+  var c = card("now","BUSINESS NOW","s6"); var B = SNAP.business_now, F = freshness(), live = B.state==="IN_PROGRESS" && !F.stale;
+  c.appendChild(h("div",{class:"hd",style:"display:flex;gap:10px;align-items:center;font-size:18px;font-weight:700"},lightEl(B.state==="IN_PROGRESS"?(F.stale?"stale":"in_progress"):(B.state==="IDLE"?"idle":"waiting"),live),h("span",{id:"now-state",text:B.state==="IDLE"?"IDLE / WAITING":B.state.replace("_"," ")})));
+  c.appendChild(h("p",{id:"now-task",style:"font-size:16px;margin:8px 0",text:B.task}));
+  var meta = [];
+  if(B.command_id) meta.push("Command "+B.command_id);
+  if(B.since) meta.push("since "+fmtDT(B.since)+" ("+ago(ms(B.since))+")");
+  if(meta.length) c.appendChild(h("div",{class:"small muted",text:meta.join(" · ")}));
+  if(B.state==="IN_PROGRESS" && F.stale) c.appendChild(h("div",{class:"small",style:"color:var(--warn)",text:"Recorded as in progress at the last sync, but that snapshot is stale: it may have finished since. No activity is implied."}));
+  c.appendChild(h("div",{class:"small muted",text:"source: "+B.source+" · "}));
+  if(B.waiting_on&&B.waiting_on.length){ c.appendChild(h("h3",{class:"small muted",text:"WAITING ON CATALIN"})); c.appendChild(h("ul",null,B.waiting_on.map(function(w){return h("li",{text:w});}))); }
+  if(B.next_dates&&B.next_dates.length){ c.appendChild(h("h3",{class:"small muted",text:"NEXT DATED CHECKS"})); c.appendChild(h("ul",null,B.next_dates.map(function(d){return h("li",{text:d.when+": "+d.what});}))); }
+  return c;
+}
+function sCeo(){
+  var c = card("ceo","CEO COMMAND","s6"); var K = SNAP.ceo_command.current;
+  c.appendChild(h("div",{style:"display:flex;flex-wrap:wrap;gap:8px;align-items:center"},h("b",{class:"mono",id:"ceo-id",style:"font-family:var(--mono);font-size:16px",text:K.command_id||"UNKNOWN"}),
+    h("span",{class:"pill",id:"ceo-status",text:K.status}),h("span",{class:"pill",text:"PRIORITY "+K.priority}),pill(K.label)));
+  var flow = ["ACKNOWLEDGED","IN_PROGRESS","COMPLETE"]; var hist = (SNAP.ceo_command.history||[]).filter(function(x){return x.id===K.command_id;})[0];
+  var idx = {ACKNOWLEDGED:0,IN_PROGRESS:1,COMPLETE:2,BLOCKED:2}[K.status];
+  c.appendChild(h("div",{class:"steps"},flow.map(function(s,i){ var label = (i===2&&K.status==="BLOCKED")?"BLOCKED":s; var cls = "step"+(i===idx?" on":(idx!=null&&i<idx?" done":"")); return h("span",{class:cls,text:label}); })));
+  c.appendChild(h("p",{style:"margin:6px 0",id:"ceo-summary",text:K.summary}));
+  c.appendChild(h("div",{class:"small muted",text:"Issued: "+K.issued+" · status updated "+(K.status_updated?fmtDT(K.status_updated):"UNKNOWN")+(K.status_note?" · note: "+K.status_note:"")}));
+  c.appendChild(h("div",{class:"small muted",text:"Read-only view of "+K.source}));
+  var H = SNAP.ceo_command.history||[];
+  if(H.length>1){ var t = h("table",null,h("tr",null,h("th",{text:"Command"}),h("th",{text:"Status"}),h("th",{text:"Updated"})));
+    H.slice().reverse().forEach(function(x){ t.appendChild(h("tr",null,h("td",{text:x.id}),h("td",{text:x.status}),h("td",{text:x.updated?fmtDT(x.updated):"UNKNOWN"}))); });
+    c.appendChild(h("details",null,h("summary",{text:"Command history ("+H.length+")"}),h("div",{class:"scroll"},t))); }
+  return c;
+}
+function sHealth(){
+  var c = card("health","SYSTEM HEALTH","s6"); var lab = {ok:"OK",warn:"WARNING",blocked:"BLOCKED",unknown:"UNKNOWN",unverified:"READ OK · not checkable from box"};
+  SNAP.system_health.forEach(function(x){
+    c.appendChild(h("div",{class:"row","data-health":x.id},lightEl(x.state),h("div",{class:"main"},
+      h("div",{class:"ttl",text:x.name+" — "+(lab[x.state]||x.state)}),h("div",{text:x.headline}),
+      h("div",{class:"small muted",text:x.evidence}),
+      h("div",{class:"small muted",text:"as of "+(x.as_of?fmtDT(x.as_of):"UNKNOWN")+" · source: "+x.source}))));
+  });
+  return c;
+}
+function sHave(){
+  var c = card("have","WHAT WE HAVE","s6"); var A = SNAP.assets;
+  var tiles = h("div",{class:"tiles"});
+  A.counts.forEach(function(k){ var v = k.value==null?"UNKNOWN":k.value.toLocaleString("en-GB");
+    tiles.appendChild(h("div",{class:"metric"},h("div",{class:"t",text:k.title}),h("div",{class:"v"+(k.value==null?" unk":""),text:v}),h("div",null,pill(k.label)),k.note?h("div",{class:"n",text:k.note}):null,h("div",{class:"f",text:"source: "+k.source}))); });
+  c.appendChild(tiles);
+  function list(title, items, fn, open){ if(!items||!items.length) return null; return h("details",open?{open:true}:null,h("summary",{text:title+" ("+items.length+")"}),items.map(fn)); }
+  c.appendChild(list("Profiles", A.profiles, function(i){return linkRow(i);}, true));
+  c.appendChild(list("Netlify tool sites and hub", A.netlify_sites, function(i){return linkRow(i, i.name);}, true));
+  c.appendChild(list("Guides hub pages", A.hub_pages, function(i){return linkRow(i);}));
+  c.appendChild(list("Payhip products (suggested prices; live prices unverified)", A.payhip_products, function(i){
+    var d = linkRow(i); var p = i.suggested_price_gbp==null?"price UNKNOWN":(i.free?"free":"£"+i.suggested_price_gbp.toFixed(2)); d.appendChild(h("span",{class:"st",text:p+" "})); d.appendChild(pill(i.price_label)); return d; }));
+  c.appendChild(list("YouTube Shorts", A.youtube_shorts, function(i){ var d = linkRow(i); d.appendChild(h("span",{class:"st",text:(i.views_28d==null?"views UNKNOWN":i.views_28d+" views (28d)")})); return d; }));
+  c.appendChild(list("Fiverr gigs", A.fiverr_gigs, function(i){return linkRow(i);}));
+  return c;
+}
+function radarSvg(items){
+  var W=640,H=330,pl=64,pr=16,pt=22,pb=64,cols=5, iw=(W-pl-pr)/cols, plotH=H-pt-pb;
+  var NS="http://www.w3.org/2000/svg"; var svg=document.createElementNS(NS,"svg"); svg.setAttribute("viewBox","0 0 "+W+" "+H); svg.setAttribute("role","img");
+  svg.setAttribute("aria-label","Opportunity radar: evidence level against estimated 60-day value");
+  function el(n,a,t){ var e=document.createElementNS(NS,n); for(var k in a) e.setAttribute(k,a[k]); if(t!=null) e.textContent=t; return e; }
+  var evs = items.filter(function(i){return i.ev_60d_high_gbp!=null;}).map(function(i){return i.ev_60d_high_gbp;}); var maxV = Math.max.apply(null,evs.concat([10]))*1.15;
+  for(var i=0;i<cols;i++){ svg.appendChild(el("rect",{x:pl+i*iw,y:pt,width:iw,height:plotH,fill:i%2?"rgba(61,224,255,.03)":"rgba(139,123,255,.04)",stroke:"#1a2a46"}));
+    svg.appendChild(el("text",{x:pl+i*iw+iw/2,y:H-pb+16,"text-anchor":"middle",fill:"#8ea0c0","font-size":12},"E"+i)); }
+  svg.appendChild(el("text",{x:pl+(W-pl-pr)/2,y:H-8,"text-anchor":"middle",fill:"#8ea0c0","font-size":11},"evidence level (E0 belief … E4 paid)  →"));
+  svg.appendChild(el("line",{x1:pl,x2:W-pr,y1:pt+plotH+0.5,y2:pt+plotH+0.5,stroke:"#25406b"}));
+  svg.appendChild(el("text",{x:8,y:pt+10,fill:"#8ea0c0","font-size":11},"£ / 60d (est.)"));
+  svg.appendChild(el("text",{x:8,y:pt+plotH-6,fill:"#8ea0c0","font-size":10},"value UNKNOWN"));
+  svg.appendChild(el("line",{x1:pl,x2:W-pr,y1:pt+plotH-22,y2:pt+plotH-22,stroke:"#25406b","stroke-dasharray":"4 4"}));
+  [0,.5,1].forEach(function(f){ var y=pt+(plotH-34)*(1-f)+6; svg.appendChild(el("text",{x:pl-6,y:y+4,"text-anchor":"end",fill:"#6f7d96","font-size":10},"£"+Math.round(maxV*f))); });
+  var slot={};
+  items.forEach(function(it){ if(it.evidence_level==null) return; var cx0=pl+it.evidence_level*iw+iw/2;
+    var yv = it.ev_60d_high_gbp!=null ? pt+6+(plotH-34)*(1-it.ev_60d_high_gbp/maxV) : pt+plotH-10;
+    var key=it.evidence_level+"|"+(it.ev_60d_high_gbp!=null?"v":"u"); var n=(slot[key]=(slot[key]||0)+1)-1; var col=n%3,row=Math.floor(n/3);
+    var cx=cx0+(col-1)*(iw/3.1), cy=yv-row*26; if(it.ev_60d_high_gbp==null&&row){cy=yv-row*26;}
+    var g=el("g",{}); g.appendChild(el("title",{},it.id+" "+it.name+" | evidence E"+it.evidence_level+" | "+(it.ev_60d_high_gbp!=null?"est. £"+it.ev_60d_high_gbp+" per 60d":"value UNKNOWN")));
+    g.appendChild(el("circle",{cx:cx,cy:cy,r:12,fill:it.group==="researched"?"rgba(139,123,255,.35)":"rgba(61,224,255,.25)",stroke:it.group==="researched"?"#8b7bff":"#3de0ff","stroke-width":1.5}));
+    g.appendChild(el("text",{x:cx,y:cy+4,"text-anchor":"middle",fill:"#dbe6fa","font-size":10,"font-weight":700},it.id)); svg.appendChild(g); });
+  return svg;
+}
+function sRadar(){
+  var c = card("radar","OPPORTUNITY RADAR","s12","evidence level vs estimated value; every grade and £ is an estimate"); c.classList.add("radar","s12");
+  var R = SNAP.radar, items = R.items;
+  c.appendChild(h("p",{class:"small muted",id:"radar-note"},"Overall evidence today: "+R.overall_evidence+". Probability of a first £ within 60 days per researched flow: "+(R.p_first_pound_60d||"UNKNOWN")+" ",pill(R.p_label),". "+R.spend_gate+"."));
+  c.appendChild(h("div",{class:"small muted"},"Scale: "+Object.keys(R.evidence_scale).map(function(k){return k+" = "+R.evidence_scale[k];}).join(" · ")));
+  c.appendChild(radarSvg(items));
+  c.appendChild(h("div",{class:"small muted"},h("span",{style:"color:var(--vi)",text:"● "}),"researched flow (not started) ",h("span",{style:"color:var(--cy)",text:"● "}),"live experiment"));
+  function card1(it){
+    var val = it.ev_60d_high_gbp!=null ? ("≈ £"+(it.ev_60d_low_gbp===it.ev_60d_high_gbp?it.ev_60d_high_gbp:it.ev_60d_low_gbp+"–"+it.ev_60d_high_gbp)+" expected over 60 days") : "UNKNOWN (no per-asset or expected-value data)";
+    return h("div",{class:"rcard","data-radar":it.id},h("div",{class:"rt"},it.rank?("#"+it.rank+" "):"",it.id+" · "+it.name," ",pill(it.evidence_level==null?"UNKNOWN":"ESTIMATE")),
+      h("dl",null,h("dt",{text:"Evidence"}),h("dd",{text:(it.evidence_level==null?"UNKNOWN":"E"+it.evidence_level)+" — "+it.evidence_basis}),
+        h("dt",{text:"Realistic value"}),h("dd",null,val+" ",pill(it.ev_label),h("div",{class:"small muted",text:"Unit economics: "+it.unit_value})),
+        h("dt",{text:"Bottleneck"}),h("dd",{text:it.bottleneck}),h("dt",{text:"Next validation"}),h("dd",{text:it.next_validation}),
+        h("dt",{text:"Status"}),h("dd",{text:it.status})));
+  }
+  var rs = items.filter(function(i){return i.group==="researched";}), le = items.filter(function(i){return i.group!=="researched";});
+  c.appendChild(h("details",{open:true},h("summary",{text:"Researched flows, ranked ("+rs.length+")"}),rs.map(card1)));
+  c.appendChild(h("details",null,h("summary",{text:"Live experiments ("+le.length+")"}),le.map(card1)));
+  return c;
+}
+function sActivity(){
+  var c = card("activity","RECENT ACTIVITY","s6","newest completed entries in WORK_LOG"); var ul = h("ul",{class:"tl"});
+  SNAP.activity.items.forEach(function(a){
+    ul.appendChild(h("li",null,h("div",{class:"ts",text:fmtDT(a.ts)+(a.ts_precision==="approx"?" (approx)":"")}),h("div",{class:"ttl",style:"font-weight:600",text:a.title}),
+      (a.result||a.what)?h("div",{class:"small muted",text:a.result||a.what}):null)); });
+  c.appendChild(ul); c.appendChild(h("div",{class:"small muted",text:"Source: "+SNAP.activity.source+". Static list of recorded events; it does not move or imply running work."}));
+  return c;
+}
+function dueText(d){ if(!d) return null; var n = dayDiff(d, ymdLondon(Date.now())); return n<0?("OVERDUE by "+(-n)+"d"):(n===0?"DUE TODAY":("due in "+n+"d ("+d+")")); }
+function sHuman(){
+  var c = card("human","HUMAN ACTIONS NEEDED","s6","only what Catalin must do, most urgent first"); var H = SNAP.human_actions;
+  c.appendChild(h("div",{class:"small muted",id:"human-count",text:H.count+" open items. "+H.source}));
+  function row(it){ var d = dueText(it.due); return h("div",{class:"row","data-rank":it.rank},h("span",{class:"pill sev-"+(it.urgency==="critical"?"critical":it.urgency),text:it.urgency.toUpperCase()}),
+    h("div",{class:"main"},h("div",{class:"ttl",text:"#"+it.rank+" "+it.title}),d?h("div",{class:"small",style:"color:var(--warn)",text:d}):null,
+      it.detail?h("div",{class:"small muted",text:it.detail}):null,h("div",{class:"small muted",text:it.section}))); }
+  var top = H.items.filter(function(i){return i.urgency==="critical"||i.urgency==="high";}), rest = H.items.filter(function(i){return !(i.urgency==="critical"||i.urgency==="high");});
+  c.appendChild(h("div",null,top.map(row)));
+  if(rest.length) c.appendChild(h("details",null,h("summary",{text:"Medium and low priority ("+rest.length+")"}),rest.map(row)));
+  if(H.superseded_hidden&&H.superseded_hidden.length) c.appendChild(h("div",{class:"small muted",text:"Hidden because already done: "+H.superseded_hidden.map(function(x){return x.title+" ("+x.reason+")";}).join("; ")}));
+  return c;
+}
+function sRisks(){
+  var c = card("risks","RISKS / ALERTS","s6","stale data, verification blocks, policy and measurement risks");
+  SNAP.alerts.forEach(function(a){ c.appendChild(h("div",{class:"row","data-alert":a.category},h("span",{class:"pill sev-"+a.severity,text:a.severity.toUpperCase()}),
+    h("div",{class:"main"},h("div",{class:"ttl",text:a.title}),h("div",{class:"small muted",text:a.category.replace("_"," ")+" · "+a.source}),h("div",{class:"small",text:a.detail})))); });
+  return c;
+}
+function sMilestones(){
+  var c = card("milestones","MILESTONES","s6","TARGETS, not forecasts"); var M = SNAP.milestones, rev = SNAP.metrics[M.basis_metric];
+  M.items.forEach(function(m){ var pct = (rev&&rev.value!=null)?Math.min(rev.value/m.target_gbp*100,100):null;
+    c.appendChild(h("div",{class:"row","data-milestone":m.id},h("div",{class:"main"},
+      h("div",{style:"display:flex;gap:8px;align-items:center;flex-wrap:wrap"},h("b",{text:m.label}),h("span",{class:"pill TARGET",text:"TARGET"}),
+        h("span",{class:"small muted",text:pct==null?"progress UNKNOWN":(m.reached?"reached":pct.toFixed(pct<1&&pct>0?2:0)+"% of target")})),
+      h("div",{class:"bar",style:"margin-top:6px"},h("i",{style:"width:"+(pct==null?0:pct)+"%"}))))); });
+  c.appendChild(h("p",{class:"small muted",text:M.disclaimer+" Basis: "+M.basis+" ("+(rev&&rev.value!=null?fmtVal(rev).t:"UNKNOWN")+")."}));
+  return c;
+}
+function sSync(){
+  var c = card("sync","LAST DATA SYNC","s12"); var F = freshness(), nx = nextSync();
+  c.appendChild(h("div",{style:"display:flex;flex-wrap:wrap;gap:16px;align-items:center"},
+    h("div",null,h("div",{class:"small muted",text:"Snapshot generated"}),h("div",{id:"sync-time",style:"font-family:var(--mono);font-size:20px",text:F.t==null?"UNKNOWN":fmtDT(SNAP.generated_at)})),
+    h("div",null,h("div",{class:"small muted",text:"Age (vs this device's clock)"}),h("div",{id:"sync-age",style:"font-family:var(--mono);font-size:20px",text:F.t==null?"UNKNOWN":ago(F.t)})),
+    h("div",null,h("div",{class:"small muted",text:"Freshness"}),h("div",{style:"display:flex;gap:8px;align-items:center;font-size:18px"},lightEl(F.stale?"stale":"ok"),h("span",{id:"sync-fresh",text:F.stale?"STALE (limit "+F.limit+" h)":"FRESH (limit "+F.limit+" h)"}))),
+    h("div",null,h("div",{class:"small muted",text:"Next scheduled sync (UK)"}),h("div",{style:"font-family:var(--mono);font-size:20px",text:nx?fmtDT(new Date(nx).toISOString()):"UNKNOWN"}))));
+  c.appendChild(h("p",{class:"small muted",text:"Schedule (UK, daily): "+((SNAP.freshness&&SNAP.freshness.sync_schedule_uk)||[]).join(", ")+". "+(SNAP.freshness&&SNAP.freshness.refresh_mechanism||"")}));
+  c.appendChild(h("p",{class:"small muted",id:"sync-source",text:"Data shown from: "+SOURCE+". Sources tried: "+TRIED.map(function(x){return x.url+" → "+(x.ok?"ok":"not available ("+x.err+")");}).join("; ")+". This tab re-checks every "+(CFG.REFETCH_MINUTES||5)+" min."}));
+  var t = h("table",null,h("tr",null,h("th",{text:"Source file"}),h("th",{text:"Last modified"}),h("th",{text:"Age at this moment"})));
+  SNAP.sources.forEach(function(s){ t.appendChild(h("tr",null,h("td",{text:s.file}),h("td",{text:s.modified?fmtDT(s.modified):"UNKNOWN"}),h("td",{text:s.modified?ago(ms(s.modified)):"UNKNOWN"}))); });
+  var inp = h("input",{type:"file",accept:"application/json,.json",id:"load-file","aria-label":"Load a public_status.json file"});
+  inp.addEventListener("change",function(){ var f = inp.files&&inp.files[0]; if(!f) return; var r = new FileReader();
+    r.onload = function(){ try{ var j = JSON.parse(String(r.result)); if(!valid(j)) throw new Error("not a valid snapshot"); SNAP=j; SOURCE="local file: "+f.name; TRIED.push({url:SOURCE,ok:true}); $("#err").style.display="none"; renderAll(); }catch(e){ alert("Could not use that file: "+e.message); } };
+    r.readAsText(f); });
+  c.appendChild(h("p",{class:"small muted"},"Offline use: open the exported public_status.json from the private reports repo here: ",inp));
+  c.appendChild(h("details",null,h("summary",{text:"Source files behind this snapshot ("+SNAP.sources.length+")"}),h("div",{class:"scroll"},t)));
+  return c;
+}
+function renderFoot(){
+  var f = $("#foot"); clear(f);
+  f.appendChild(h("div",null,"Rules: "+SNAP.data_rules)); f.appendChild(h("div",null,"Links: "+SNAP.link_policy));
+  f.appendChild(h("div",null,"Private operations page: no analytics script, no cookies, noindex. Contains only sanitised data from "+SNAP.generated_by+" (schema "+SNAP.schema_version+", content hash "+SNAP.content_sha256_16+")."));
+}
+function renderAll(){
+  NO = 0; var g = $("#grid"); clear(g);
+  renderTop(); renderBanners();
+  var ow = $("#owner"); if(ow){ clear(ow); ow.appendChild(sOwner()); }
+  renderHierarchy();
+  [sClock,sMoney,sTraffic,sNow,sCeo,sHealth,sHave,sRadar,sActivity,sHuman,sRisks,sMilestones,sSync].forEach(function(fn){ g.appendChild(fn()); });
+  renderFoot();
+}
+function renderError(msg){
+  var e = $("#err"); e.style.display="block"; clear(e);
+  e.appendChild(h("strong",{text:"No snapshot could be loaded. "})); e.appendChild(document.createTextNode(msg+" Nothing is shown rather than showing numbers that cannot be verified."));
+  $("#subtitle").textContent = "snapshot unavailable"; clear($("#grid")); clear($("#hier")); clear($("#banners"));
+  var ch = $("#topchips"); clear(ch); ch.appendChild(h("span",{class:"chip",id:"chip-sync"},lightEl("stale"),h("span",{text:"No data"}),h("b",{text:"STALE"})));
+}
+function tick(){ if(!SNAP) return; renderTop(); renderBanners();
+  var F = freshness(); var a=$("#sync-age"); if(a) a.textContent = F.t==null?"UNKNOWN":ago(F.t);
+  var s=$("#sync-fresh"); if(s) s.textContent = F.stale?"STALE (limit "+F.limit+" h)":"FRESH (limit "+F.limit+" h)"; }
+
+/* ---------- loading: try every URL, newest generated_at wins; bundled copy is the last resort ---------- */
+function valid(j){ return j && typeof j==="object" && j.metrics && j.generated_at && j.layout && j.hierarchy && j.challenge; }
+function load(){
+  var urls = (CFG.SNAPSHOT_URLS||[]).slice(); var cands = []; TRIED = [];
+  return Promise.all(urls.map(function(u){
+    if(location.protocol==="file:" && !/^https?:/.test(u)){ TRIED.push({url:u,ok:false,err:"not fetchable from file:// (bundled copy used instead)"}); return Promise.resolve(); }
+    var sep = u.indexOf("?")>=0?"&":"?";
+    return fetch(u+sep+"_="+Date.now(),{cache:"no-store"}).then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+      .then(function(j){ if(!valid(j)) throw new Error("invalid snapshot"); cands.push({url:u,snap:j}); TRIED.push({url:u,ok:true}); })
+      .catch(function(e){ TRIED.push({url:u,ok:false,err:String(e&&e.message||e)}); });
+  })).then(function(){
+    if(valid(window.TL_SNAPSHOT)){ cands.push({url:"bundled copy (public_status.js)",snap:window.TL_SNAPSHOT}); TRIED.push({url:"bundled copy (public_status.js)",ok:true}); }
+    if(!cands.length) throw new Error("All sources failed: "+TRIED.map(function(x){return x.url+" ("+x.err+")";}).join("; "));
+    cands.sort(function(a,b){ return (ms(b.snap.generated_at)||0)-(ms(a.snap.generated_at)||0); });
+    return cands[0];
+  });
+}
+function boot(first){
+  load().then(function(c){
+    if(SNAP && SOURCE && SOURCE.indexOf("local file")===0 && (ms(SNAP.generated_at)||0) >= (ms(c.snap.generated_at)||0)){ tick(); return; }
+    var changed = !SNAP || SNAP.generated_at!==c.snap.generated_at || SOURCE!==c.url;
+    SNAP = c.snap; SOURCE = c.url;
+    $("#err").style.display="none";
+    if(first||changed) renderAll(); else tick();
+  }).catch(function(e){ if(!SNAP) renderError(String(e.message||e)); });
+}
+window.__TL_DEBUG = function(){ return {source:SOURCE,tried:TRIED}; };
+boot(true);
+setInterval(tick, 30000);
+setInterval(function(){ boot(false); }, Math.max(1,(CFG.REFETCH_MINUTES||5))*60000);
+})();
+</script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-05T23:01:28+01:00",
-  "generated_epoch": 1791237688,
+  "generated_at": "2026-10-05T23:03:19+01:00",
+  "generated_epoch": 1791237799,
   "generated_by": "brain/build_snapshot.py",
   "timezone": "Europe/London",
   "freshness": {
@@ -34,7 +34,7 @@
     "timezone": "Europe/London",
     "label": "FACT",
     "source": "Challenge definition: 2 Oct 2026 = Day 1, Day 30 = 31 Oct 2026 (CEO command / Catalin)",
-    "as_of": "2026-10-05T23:01:28+01:00",
+    "as_of": "2026-10-05T23:03:19+01:00",
     "note": "The page recomputes the day number from the browser clock."
   },
   "metrics": {
@@ -302,7 +302,7 @@
       "value": null,
       "label": "UNKNOWN",
       "source": "GoatCounter (live ~08:31 2 Oct)",
-      "as_of": "2026-10-05T23:01:28+01:00",
+      "as_of": "2026-10-05T23:03:19+01:00",
       "stale_after_hours": 24,
       "note": "Public counts are not enabled by the owner, so stats need a login (not used here). First real baseline planned Sun 4 Oct; the figure then goes into DASHBOARD.md §5."
     },
@@ -311,7 +311,7 @@
       "value": null,
       "label": "UNKNOWN",
       "source": "GoatCounter events",
-      "as_of": "2026-10-05T23:01:28+01:00",
+      "as_of": "2026-10-05T23:03:19+01:00",
       "stale_after_hours": 24,
       "note": "Needs a GoatCounter events read; counter live ~08:31 2 Oct"
     },
@@ -320,7 +320,7 @@
       "value": null,
       "label": "UNKNOWN",
       "source": "GoatCounter events",
-      "as_of": "2026-10-05T23:01:28+01:00",
+      "as_of": "2026-10-05T23:03:19+01:00",
       "stale_after_hours": 24,
       "note": "Needs a GoatCounter events read (payhip_click events)"
     }
@@ -403,7 +403,7 @@
       "level": "OWNER",
       "name": "Catalin Birtum",
       "state": "attention",
-      "headline": "79 open actions for Catalin (14 critical/high)",
+      "headline": "75 open actions for Catalin (14 critical/high)",
       "detail": "Top: By Sun 4 Oct: decide whether to publish a Self Assessment registration-deadline Short",
       "source": "HUMAN_ACTION_QUEUE.md"
     },
@@ -541,7 +541,7 @@
     ],
     "history_source": "export/ceo/state.tsv",
     "last_bridge_check": [
-      "2026-10-05 23:01:06 BST",
+      "2026-10-05 23:02:08 BST",
       "CHECKED"
     ]
   },
@@ -551,17 +551,17 @@
       "name": "GitHub bridge (private reports repo)",
       "state": "ok",
       "headline": "CEO command channel reachable at last check; export scan PASS; push enabled",
-      "evidence": "Last bridge check: 2026-10-05 23:01:06 BST. Last push commit: 2026-10-05T22:32:20+01:00. Last export scan: 2026-10-05T22:32:19+01:00.",
-      "as_of": "2026-10-05T22:32:19+01:00",
+      "evidence": "Last bridge check: 2026-10-05 23:02:08 BST. Last push commit: 2026-10-05T23:01:30+01:00. Last export scan: 2026-10-05T23:01:30+01:00.",
+      "as_of": "2026-10-05T23:01:30+01:00",
       "source": "export/ceo/check_log.txt, export/LAST_SCAN.txt, export/repo git log"
     },
     {
       "id": "scheduled_sync",
       "name": "Scheduled sync (08:10, 11:10, 14:10, 17:10, 20:10 UK)",
       "state": "ok",
-      "headline": "Last export Mon 22:32; schedule 08:10, 11:10, 14:10, 17:10, 20:10 UK daily",
+      "headline": "Last export Mon 23:01; schedule 08:10, 11:10, 14:10, 17:10, 20:10 UK daily",
       "evidence": "Last expected slot Mon 20:10; next Tue 08:10. No slot missed.",
-      "as_of": "2026-10-05T22:32:19+01:00",
+      "as_of": "2026-10-05T23:01:30+01:00",
       "source": "export/LAST_SCAN.txt vs the schedule (inferred from the last scan time; the scheduler itself is not directly observable)"
     },
     {
@@ -569,8 +569,8 @@
       "name": "Analytics (GoatCounter)",
       "state": "warn",
       "headline": "Counter tag found on 7 of 7 sites probed; visitor numbers UNKNOWN (not readable without login)",
-      "evidence": "Live HTML check at 23:01. Deployed ~08:31 per WORK_LOG. First data read planned Sun 4 Oct.",
-      "as_of": "2026-10-05T23:01:28+01:00",
+      "evidence": "Live HTML check at 23:03. Deployed ~08:31 per WORK_LOG. First data read planned Sun 4 Oct.",
+      "as_of": "2026-10-05T23:03:19+01:00",
       "source": "Live HTML of the Netlify sites + WORK_LOG"
     },
     {
@@ -578,8 +578,8 @@
       "name": "Netlify sites",
       "state": "ok",
       "headline": "7 of 7 sites and 15 of 15 hub pages return HTTP 200",
-      "evidence": "Probed from the box at 23:01. Credits left about 165 of 300 (estimate); each production deploy costs about 15.",
-      "as_of": "2026-10-05T23:01:28+01:00",
+      "evidence": "Probed from the box at 23:03. Credits left about 165 of 300 (estimate); each production deploy costs about 15.",
+      "as_of": "2026-10-05T23:03:19+01:00",
       "source": "HTTP probe of every site and hub page"
     },
     {
@@ -638,7 +638,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -649,7 +649,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -660,7 +660,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -671,7 +671,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -682,7 +682,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -693,7 +693,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -704,7 +704,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       }
     ],
@@ -715,7 +715,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -724,7 +724,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -733,7 +733,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -742,7 +742,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -751,7 +751,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -760,7 +760,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -769,7 +769,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -778,7 +778,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -787,7 +787,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -796,7 +796,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -805,7 +805,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -814,7 +814,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -823,7 +823,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -832,7 +832,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -841,7 +841,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       }
     ],
@@ -855,7 +855,7 @@
         "link_check": {
           "state": "not_checkable_from_box",
           "http": 403,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -867,7 +867,7 @@
         "link_check": {
           "state": "not_checkable_from_box",
           "http": 403,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -879,7 +879,7 @@
         "link_check": {
           "state": "not_checkable_from_box",
           "http": 403,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -891,7 +891,7 @@
         "link_check": {
           "state": "not_checkable_from_box",
           "http": 403,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -903,7 +903,7 @@
         "link_check": {
           "state": "not_checkable_from_box",
           "http": 403,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -915,7 +915,7 @@
         "link_check": {
           "state": "not_checkable_from_box",
           "http": 403,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -927,7 +927,7 @@
         "link_check": {
           "state": "not_checkable_from_box",
           "http": 403,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -939,7 +939,7 @@
         "link_check": {
           "state": "not_checkable_from_box",
           "http": 403,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -951,7 +951,7 @@
         "link_check": {
           "state": "not_checkable_from_box",
           "http": 403,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -963,7 +963,7 @@
         "link_check": {
           "state": "not_checkable_from_box",
           "http": 403,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -975,7 +975,7 @@
         "link_check": {
           "state": "not_checkable_from_box",
           "http": 403,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -987,7 +987,7 @@
         "link_check": {
           "state": "not_checkable_from_box",
           "http": 403,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -999,7 +999,7 @@
         "link_check": {
           "state": "not_checkable_from_box",
           "http": 403,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -1011,7 +1011,7 @@
         "link_check": {
           "state": "not_checkable_from_box",
           "http": 403,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       }
     ],
@@ -1022,7 +1022,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -1031,7 +1031,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -1040,7 +1040,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -1049,7 +1049,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       }
     ],
@@ -1061,7 +1061,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -1071,7 +1071,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -1081,7 +1081,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -1091,7 +1091,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -1101,7 +1101,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -1111,7 +1111,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -1121,7 +1121,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -1131,7 +1131,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -1141,7 +1141,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       }
     ],
@@ -1152,7 +1152,7 @@
         "link_check": {
           "state": "not_checkable_from_box",
           "http": 403,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -1161,7 +1161,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       },
       {
@@ -1170,7 +1170,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-05T23:01:28+01:00"
+          "checked_at": "2026-10-05T23:03:19+01:00"
         }
       }
     ],
@@ -2161,49 +2161,13 @@
         "rank": 59
       },
       {
-        "title": "Create the public status repo.",
-        "detail": "github.com (signed in as birtomcc) → green New button → Owner birtomcc, Repository name tidy-ledger-status, Public, leave \"Add a README / .gitignore / licence\" all OFF → Create repository. (Do NOT change tidy-ledger-business-reports: it stays private.)",
-        "section": "Business Control Brain — live refresh without Netlify redeploys (optional, £0;…",
-        "urgency": "medium",
-        "due": null,
-        "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 60
-      },
-      {
-        "title": "Let the existing sync token write to it.",
-        "detail": "GitHub → your avatar → Settings → Developer settings → Personal access tokens → Fine-grained tokens → open the token used for the reports repo → Repository access → Only select repositories → add tidy-ledger-status → Permissions → Repository permissions → Contents: Read and write → Update. The toke…",
-        "section": "Business Control Brain — live refresh without Netlify redeploys (optional, £0;…",
-        "urgency": "medium",
-        "due": null,
-        "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 61
-      },
-      {
-        "title": "Switch on GitHub Pages.",
-        "detail": "Repo tidy-ledger-status → Settings → Pages → Build and deployment: Source Deploy from a branch → Branch main, folder / (root) → Save. The page address will be https://birtomcc.github.io/tidy-ledger-status/ (the Brain page is already configured to look there first).",
-        "section": "Business Control Brain — live refresh without Netlify redeploys (optional, £0;…",
-        "urgency": "medium",
-        "due": null,
-        "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 62
-      },
-      {
-        "title": "Tell the agent \"status repo ready\".",
-        "detail": "The agent then writes the URL into brain/pages_repo_url.txt, creates brain/PAGES_ENABLED, and runs the first publish (the sync then keeps it fresh). Until then it stays disabled.",
-        "section": "Business Control Brain — live refresh without Netlify redeploys (optional, £0;…",
-        "urgency": "medium",
-        "due": null,
-        "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 63
-      },
-      {
         "title": "Card providers",
         "detail": "(CanDo, XEPAY, Dojo, SumUp) referral-terms enquiry — draft strategy/portfolio_2026-10-01.md §7.1. (Gate 1 for the card calculator was due Sun 4 Oct.)",
         "section": "Partner / referral enquiries (nothing sent; each needs your explicit approval;…",
         "urgency": "low",
         "due": "2026-10-04",
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 64
+        "rank": 60
       },
       {
         "title": "Re-check dated facts",
@@ -2212,7 +2176,7 @@
         "urgency": "low",
         "due": "2026-12-15",
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 65
+        "rank": 61
       },
       {
         "title": "Optional: add the other 6 Netlify sites as URL-prefix properties in Search Console (Google sign-in; the agent cannot do the verification for you).",
@@ -2221,7 +2185,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 66
+        "rank": 62
       },
       {
         "title": "Optional: ask [email] whether it will act as a data processor (no DPA published)",
@@ -2230,7 +2194,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 67
+        "rank": 63
       },
       {
         "title": "GoCardless",
@@ -2239,7 +2203,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 68
+        "rank": 64
       },
       {
         "title": "Easy R&D",
@@ -2248,7 +2212,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 69
+        "rank": 65
       },
       {
         "title": "Dext",
@@ -2257,7 +2221,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 70
+        "rank": 66
       },
       {
         "title": "Optional: Farsight Security, Birmingham Telecom (see above).",
@@ -2266,7 +2230,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 71
+        "rank": 67
       },
       {
         "title": "Phase-2 introducer enquiries",
@@ -2275,7 +2239,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 72
+        "rank": 68
       },
       {
         "title": "Landlord software affiliates",
@@ -2284,7 +2248,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 73
+        "rank": 69
       },
       {
         "title": "Plug-in solar affiliates (G1)",
@@ -2293,7 +2257,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 74
+        "rank": 70
       },
       {
         "title": "Validation steps only you can do (your name, no software)",
@@ -2302,7 +2266,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 75
+        "rank": 71
       },
       {
         "title": "Time-sensitive dates",
@@ -2311,7 +2275,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 76
+        "rank": 72
       },
       {
         "title": "Euverify (GPSR) affiliate",
@@ -2320,7 +2284,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 77
+        "rank": 73
       },
       {
         "title": "Do not apply",
@@ -2329,7 +2293,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 78
+        "rank": 74
       },
       {
         "title": "Before any referral link goes live: terms accepted by you, \"Ad\" wording approved; then ask the agent to un-hide that tool's #adslot.",
@@ -2338,10 +2302,10 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 79
+        "rank": 75
       }
     ],
-    "count": 79,
+    "count": 75,
     "superseded_hidden": [
       {
         "title": "Create the GoatCounter account",
@@ -2359,7 +2323,7 @@
     "title_en": "How the business is doing",
     "subtitle_ro": "Doar cifre verificate. Proiecțiile nu sunt bani câștigați.",
     "subtitle_en": "VERIFIED figures only. Projections are not earned.",
-    "last_updated": "2026-10-05T23:01:28+01:00",
+    "last_updated": "2026-10-05T23:03:19+01:00",
     "last_updated_label_ro": "Ultima actualizare",
     "last_updated_label_en": "Last updated",
     "timezone": "Europe/London",
@@ -2485,7 +2449,7 @@
             "label": "FACT"
           }
         ],
-        "as_of": "2026-10-05T23:01:28+01:00",
+        "as_of": "2026-10-05T23:03:19+01:00",
         "source": "HTTP probe of tidy-ledger-guides-uk gift URLs"
       },
       "tiktok": {
@@ -2588,7 +2552,7 @@
           },
           {
             "title": "E19 AI video commerce (owner session/parent workstream)",
-            "detail": "batch2 (3 clips, 21:34) + batch3 (3 clips, 22:10) RENDERED + QA'd, not posted (await Catalin approval). VERIFIED 22:35 by curl: /picks/dog-paw-cleaner-cup/ = 404 (picks pages are in a zip, not deployed). Rule: deploy al…"
+            "detail": "batch2 (3 clips, 21:34) + batch3 (3 clips, 22:10) RENDERED + QA'd, not posted (await Catalin approval). VERIFIED 22:35 by curl: /picks/dog-paw-cleaner-cup/ = 404 (picks pages are in a zip, not deployed). Rule: /picks/ c…"
           }
         ],
         "next": [
@@ -2973,11 +2937,11 @@
     },
     {
       "file": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-      "modified": "2026-10-05T21:55:12+01:00"
+      "modified": "2026-10-05T23:01:54+01:00"
     },
     {
       "file": "BUSINESS_CONTROL_CENTER/WORK_QUEUE.md",
-      "modified": "2026-10-05T23:01:28+01:00"
+      "modified": "2026-10-05T23:01:54+01:00"
     },
     {
       "file": "BUSINESS_CONTROL_CENTER/CURRENT_WORK.md",
@@ -2997,19 +2961,19 @@
     },
     {
       "file": "export/ceo/CEO_COMMANDS.latest.md",
-      "modified": "2026-10-05T23:01:06+01:00"
+      "modified": "2026-10-05T23:02:08+01:00"
     },
     {
       "file": "export/ceo/state.tsv",
-      "modified": "2026-10-05T23:01:06+01:00"
+      "modified": "2026-10-05T23:02:08+01:00"
     },
     {
       "file": "export/ceo/check_log.txt",
-      "modified": "2026-10-05T23:01:06+01:00"
+      "modified": "2026-10-05T23:02:08+01:00"
     },
     {
       "file": "export/LAST_SCAN.txt",
-      "modified": "2026-10-05T22:32:19+01:00"
+      "modified": "2026-10-05T23:01:30+01:00"
     },
     {
       "file": "HUMAN_STEPS.md",
@@ -3026,5 +2990,5 @@
   ],
   "link_policy": "Payhip, Fiverr, Quora, Reddit and LinkedIn return 403 to the box: shown as 'not checkable from box', never as broken.",
   "data_rules": "UNKNOWN means not measured; it is never shown as 0. Every metric carries label FACT, ESTIMATE or UNKNOWN, a source and an as_of time.",
-  "content_sha256_16": "4cc1135a66ef181c"
+  "content_sha256_16": "74ac848190bf9ced"
 }

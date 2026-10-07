@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-07T15:15:37+01:00",
-  "generated_epoch": 1791382537,
+  "generated_at": "2026-10-07T15:17:45+01:00",
+  "generated_epoch": 1791382665,
   "generated_by": "brain/build_snapshot.py",
   "timezone": "Europe/London",
   "freshness": {
@@ -34,7 +34,7 @@
     "timezone": "Europe/London",
     "label": "FACT",
     "source": "Challenge definition: 2 Oct 2026 = Day 1, Day 30 = 31 Oct 2026 (CEO command / Catalin)",
-    "as_of": "2026-10-07T15:15:37+01:00",
+    "as_of": "2026-10-07T15:17:45+01:00",
     "note": "The page recomputes the day number from the browser clock."
   },
   "metrics": {
@@ -302,7 +302,7 @@
       "value": null,
       "label": "UNKNOWN",
       "source": "GoatCounter (live ~08:31 2 Oct)",
-      "as_of": "2026-10-07T15:15:37+01:00",
+      "as_of": "2026-10-07T15:17:45+01:00",
       "stale_after_hours": 24,
       "note": "Public counts are not enabled by the owner, so stats need a login (not used here). First real baseline planned Sun 4 Oct; the figure then goes into DASHBOARD.md §5."
     },
@@ -311,7 +311,7 @@
       "value": null,
       "label": "UNKNOWN",
       "source": "GoatCounter events",
-      "as_of": "2026-10-07T15:15:37+01:00",
+      "as_of": "2026-10-07T15:17:45+01:00",
       "stale_after_hours": 24,
       "note": "Needs a GoatCounter events read; counter live ~08:31 2 Oct"
     },
@@ -320,7 +320,7 @@
       "value": null,
       "label": "UNKNOWN",
       "source": "GoatCounter events",
-      "as_of": "2026-10-07T15:15:37+01:00",
+      "as_of": "2026-10-07T15:17:45+01:00",
       "stale_after_hours": 24,
       "note": "Needs a GoatCounter events read (payhip_click events)"
     }
@@ -403,7 +403,7 @@
       "level": "OWNER",
       "name": "Catalin Birtum",
       "state": "attention",
-      "headline": "79 open actions for Catalin (15 critical/high)",
+      "headline": "80 open actions for Catalin (15 critical/high)",
       "detail": "Top: By Sun 4 Oct: decide whether to publish a Self Assessment registration-deadline Short",
       "source": "HUMAN_ACTION_QUEUE.md"
     },
@@ -551,17 +551,17 @@
       "name": "GitHub bridge (private reports repo)",
       "state": "ok",
       "headline": "CEO command channel reachable at last check; export scan PASS; push enabled",
-      "evidence": "Last bridge check: 2026-10-07 15:08:48 BST. Last push commit: 2026-10-07T14:41:52+01:00. Last export scan: 2026-10-07T14:41:51+01:00.",
-      "as_of": "2026-10-07T14:41:51+01:00",
+      "evidence": "Last bridge check: 2026-10-07 15:08:48 BST. Last push commit: 2026-10-07T15:15:41+01:00. Last export scan: 2026-10-07T15:15:40+01:00.",
+      "as_of": "2026-10-07T15:15:40+01:00",
       "source": "export/ceo/check_log.txt, export/LAST_SCAN.txt, export/repo git log"
     },
     {
       "id": "scheduled_sync",
       "name": "Scheduled sync (08:10, 11:10, 14:10, 17:10, 20:10 UK)",
       "state": "ok",
-      "headline": "Last export Wed 14:41; schedule 08:10, 11:10, 14:10, 17:10, 20:10 UK daily",
+      "headline": "Last export Wed 15:15; schedule 08:10, 11:10, 14:10, 17:10, 20:10 UK daily",
       "evidence": "Last expected slot Wed 14:10; next Wed 17:10. No slot missed.",
-      "as_of": "2026-10-07T14:41:51+01:00",
+      "as_of": "2026-10-07T15:15:40+01:00",
       "source": "export/LAST_SCAN.txt vs the schedule (inferred from the last scan time; the scheduler itself is not directly observable)"
     },
     {
@@ -569,8 +569,8 @@
       "name": "Analytics (GoatCounter)",
       "state": "warn",
       "headline": "Counter tag found on 7 of 7 sites probed; visitor numbers UNKNOWN (not readable without login)",
-      "evidence": "Live HTML check at 15:15. Deployed ~08:31 per WORK_LOG. First data read planned Sun 4 Oct.",
-      "as_of": "2026-10-07T15:15:37+01:00",
+      "evidence": "Live HTML check at 15:17. Deployed ~08:31 per WORK_LOG. First data read planned Sun 4 Oct.",
+      "as_of": "2026-10-07T15:17:45+01:00",
       "source": "Live HTML of the Netlify sites + WORK_LOG"
     },
     {
@@ -578,8 +578,8 @@
       "name": "Netlify sites",
       "state": "ok",
       "headline": "7 of 7 sites and 15 of 15 hub pages return HTTP 200",
-      "evidence": "Probed from the box at 15:15. Credits left about 165 of 300 (estimate); each production deploy costs about 15.",
-      "as_of": "2026-10-07T15:15:37+01:00",
+      "evidence": "Probed from the box at 15:17. Credits left about 165 of 300 (estimate); each production deploy costs about 15.",
+      "as_of": "2026-10-07T15:17:45+01:00",
       "source": "HTTP probe of every site and hub page"
     },
     {
@@ -638,7 +638,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -649,7 +649,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -660,7 +660,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -671,7 +671,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -682,7 +682,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -693,7 +693,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -704,7 +704,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       }
     ],
@@ -715,7 +715,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -724,7 +724,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -733,7 +733,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -742,7 +742,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -751,7 +751,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -760,7 +760,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -769,7 +769,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -778,7 +778,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -787,7 +787,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -796,7 +796,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -805,7 +805,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -814,7 +814,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -823,7 +823,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -832,7 +832,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -841,7 +841,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       }
     ],
@@ -855,7 +855,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -867,7 +867,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -879,7 +879,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -891,7 +891,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -903,7 +903,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -915,7 +915,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -927,7 +927,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -939,7 +939,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -951,7 +951,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -963,7 +963,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -975,7 +975,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -987,7 +987,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -999,7 +999,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -1011,7 +1011,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       }
     ],
@@ -1022,7 +1022,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -1031,7 +1031,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -1040,7 +1040,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -1049,7 +1049,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       }
     ],
@@ -1061,7 +1061,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -1071,7 +1071,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -1081,7 +1081,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -1091,7 +1091,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -1101,7 +1101,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -1111,7 +1111,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -1121,7 +1121,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -1131,7 +1131,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -1141,7 +1141,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       }
     ],
@@ -1152,7 +1152,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -1161,7 +1161,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       },
       {
@@ -1170,7 +1170,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:37+01:00"
+          "checked_at": "2026-10-07T15:17:45+01:00"
         }
       }
     ],
@@ -1792,13 +1792,22 @@
         "rank": 18
       },
       {
+        "title": "⭐ Add a clickable website link to @ukgiftsfinds (phone app, ~2 min, free). Today the profile has NO link, so every \"link in bio\" in our 4 clips (430+…",
+        "detail": "⭐ Add a clickable website link to @ukgiftsfinds (phone app, ~2 min, free). Today the profile has NO link, so every \"link in bio\" in our 4 clips (430+ views) leads nowhere. TikTok web has no account-type switch (VERIFIED 15:20). In the app: Profile → ☰ → Settings and privacy → Account → look for Swi…",
+        "section": "TikTok profile link — owner (added 7 Oct 2026 15:25 BST)",
+        "urgency": "medium",
+        "due": null,
+        "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
+        "rank": 19
+      },
+      {
         "title": "TikTok (@ukgiftsfinds)",
         "detail": "post batch1 videos from growth/tiktok_batch1/ (captions in captions.md) from your phone.",
         "section": "E18 Q4 gift guides — owner (added 5 Oct 2026 21:28 BST)",
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 19
+        "rank": 20
       },
       {
         "title": "B1 preferred via browser agent",
@@ -1807,7 +1816,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 20
+        "rank": 21
       },
       {
         "title": "After B1",
@@ -1816,7 +1825,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 21
+        "rank": 22
       },
       {
         "title": "E16 optional",
@@ -1825,7 +1834,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 22
+        "rank": 23
       },
       {
         "title": "1. D43 Make Hire Help (highest R4 EV)",
@@ -1834,7 +1843,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 23
+        "rank": 24
       },
       {
         "title": "2. D44 Excel bid (when ready)",
@@ -1843,7 +1852,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 24
+        "rank": 25
       },
       {
         "title": "3. D42 Testlio",
@@ -1852,7 +1861,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 25
+        "rank": 26
       },
       {
         "title": "4. D45 Contra (optional/low urgency)",
@@ -1861,7 +1870,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 26
+        "rank": 27
       },
       {
         "title": "1. D28 Mercor UK/EU generalist ($50–$70/hr)",
@@ -1870,7 +1879,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 27
+        "rank": 28
       },
       {
         "title": "2. D31 Prolific (fast small £)",
@@ -1879,7 +1888,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 28
+        "rank": 29
       },
       {
         "title": "3. D30 DataAnnotation",
@@ -1888,7 +1897,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 29
+        "rank": 30
       },
       {
         "title": "4. D29 Alignerr",
@@ -1897,7 +1906,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 30
+        "rank": 31
       },
       {
         "title": "5. D32 Outlier coding",
@@ -1906,7 +1915,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 31
+        "rank": 32
       },
       {
         "title": "6. D27 Draft.dev (optional/slower)",
@@ -1915,7 +1924,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 32
+        "rank": 33
       },
       {
         "title": "1. D17 panels (after / alongside Take Part)",
@@ -1924,7 +1933,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 33
+        "rank": 34
       },
       {
         "title": "2. D15 Percona (only if you have real DB ops stories)",
@@ -1933,7 +1942,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 34
+        "rank": 35
       },
       {
         "title": "3. D16 Airbyte (only if you have used / will use Airbyte hands-on)",
@@ -1942,7 +1951,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 35
+        "rank": 36
       },
       {
         "title": "1. Self-check honestly (5 min)",
@@ -1951,7 +1960,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 36
+        "rank": 37
       },
       {
         "title": "3. Apify $500 tutorial",
@@ -1960,7 +1969,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 37
+        "rank": 38
       },
       {
         "title": "4. E13 (unchanged, still your main marketplace test)",
@@ -1969,7 +1978,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 38
+        "rank": 39
       },
       {
         "title": "5. Optional, only if you want an outbound test later",
@@ -1978,7 +1987,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 39
+        "rank": 40
       },
       {
         "title": "Retry the Search Console indexing request",
@@ -1987,7 +1996,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 40
+        "rank": 41
       },
       {
         "title": "Open https://payhip.com/TidyLedgerUK in your own browser",
@@ -1996,7 +2005,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 41
+        "rank": 42
       },
       {
         "title": "Eyeball the free checklist file",
@@ -2005,7 +2014,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 42
+        "rank": 43
       },
       {
         "title": "Open one .xlsx in real Excel and one in Google Sheets",
@@ -2014,7 +2023,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 43
+        "rank": 44
       },
       {
         "title": "Set or confirm your Payhip payout method and tax/ID details (yours alone)",
@@ -2023,7 +2032,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 44
+        "rank": 45
       },
       {
         "title": "Solve the Fiverr bot check/CAPTCHA",
@@ -2032,7 +2041,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 45
+        "rank": 46
       },
       {
         "title": "Check what price number was actually entered",
@@ -2041,7 +2050,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 46
+        "rank": 47
       },
       {
         "title": "Decide whether to apply the drafted edits",
@@ -2050,7 +2059,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 47
+        "rank": 48
       },
       {
         "title": "Use Fiverr's report/block on the spam senders; check response-rate effects.",
@@ -2059,7 +2068,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 48
+        "rank": 49
       },
       {
         "title": "Record the login method (email vs Google/GitHub sign-in)",
@@ -2068,7 +2077,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 49
+        "rank": 50
       },
       {
         "title": "Confirm Gmail 2-step verification and recovery email/phone",
@@ -2077,7 +2086,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 50
+        "rank": 51
       },
       {
         "title": "Confirm whether a PeoplePerHour account exists",
@@ -2086,7 +2095,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 51
+        "rank": 52
       },
       {
         "title": "Confirm you are happy to publish [email] as the guides hub's public contact address",
@@ -2095,7 +2104,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 52
+        "rank": 53
       },
       {
         "title": "Re-check the billing pages of Payhip, Fiverr and Netlify: no card attached, no trial that auto-converts, no plan upgrade.",
@@ -2104,7 +2113,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 53
+        "rank": 54
       },
       {
         "title": "ICO data-protection-fee self-assessment",
@@ -2113,7 +2122,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 54
+        "rank": 55
       },
       {
         "title": "Own-visit exclusion",
@@ -2122,7 +2131,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 55
+        "rank": 56
       },
       {
         "title": "Use guide links where a hub guide fits better than a tool link (the checklist's \"hub not deployed\" line is out of date).",
@@ -2131,7 +2140,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 56
+        "rank": 57
       },
       {
         "title": "Do not post links on Reddit, MSE or LandlordZONE (they forbid promotion).",
@@ -2140,7 +2149,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 57
+        "rank": 58
       },
       {
         "title": "Ask an accountant (free or small fee, your choice) to review",
@@ -2149,7 +2158,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 58
+        "rank": 59
       },
       {
         "title": "Approve or decline the £9 domain (only if the free Netlify subdomain looks untrusted)",
@@ -2158,7 +2167,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 59
+        "rank": 60
       },
       {
         "title": "Confirm the phase-2 research direction (ranked: landlord exit-or-stay, Employment Rights Act → HR, plug-in solar, packaging EPR) before anything is b…",
@@ -2167,7 +2176,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 60
+        "rank": 61
       },
       {
         "title": "If Fiverr/Upwork ask for ID or phone verification when the gigs are posted from LISTINGS.md, only Catalin can do it.",
@@ -2176,7 +2185,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 61
+        "rank": 62
       },
       {
         "title": "Cold emails in services/web_chatbot/OUTREACH.md (Echo 3, Embellish, On Tap Heating) are drafted, NOT sent; send from [email] only after approval.",
@@ -2185,7 +2194,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 62
+        "rank": 63
       },
       {
         "title": "Previews of real businesses under /preview/ must be taken down at once if a business asks.",
@@ -2194,7 +2203,7 @@
         "urgency": "medium",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 63
+        "rank": 64
       },
       {
         "title": "Card providers",
@@ -2203,7 +2212,7 @@
         "urgency": "low",
         "due": "2026-10-04",
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 64
+        "rank": 65
       },
       {
         "title": "Re-check dated facts",
@@ -2212,7 +2221,7 @@
         "urgency": "low",
         "due": "2026-12-15",
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 65
+        "rank": 66
       },
       {
         "title": "Optional: add the other 6 Netlify sites as URL-prefix properties in Search Console (Google sign-in; the agent cannot do the verification for you).",
@@ -2221,7 +2230,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 66
+        "rank": 67
       },
       {
         "title": "Optional: ask [email] whether it will act as a data processor (no DPA published)",
@@ -2230,7 +2239,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 67
+        "rank": 68
       },
       {
         "title": "GoCardless",
@@ -2239,7 +2248,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 68
+        "rank": 69
       },
       {
         "title": "Easy R&D",
@@ -2248,7 +2257,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 69
+        "rank": 70
       },
       {
         "title": "Dext",
@@ -2257,7 +2266,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 70
+        "rank": 71
       },
       {
         "title": "Optional: Farsight Security, Birmingham Telecom (see above).",
@@ -2266,7 +2275,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 71
+        "rank": 72
       },
       {
         "title": "Phase-2 introducer enquiries",
@@ -2275,7 +2284,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 72
+        "rank": 73
       },
       {
         "title": "Landlord software affiliates",
@@ -2284,7 +2293,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 73
+        "rank": 74
       },
       {
         "title": "Plug-in solar affiliates (G1)",
@@ -2293,7 +2302,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 74
+        "rank": 75
       },
       {
         "title": "Validation steps only you can do (your name, no software)",
@@ -2302,7 +2311,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 75
+        "rank": 76
       },
       {
         "title": "Time-sensitive dates",
@@ -2311,7 +2320,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 76
+        "rank": 77
       },
       {
         "title": "Euverify (GPSR) affiliate",
@@ -2320,7 +2329,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 77
+        "rank": 78
       },
       {
         "title": "Do not apply",
@@ -2329,7 +2338,7 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 78
+        "rank": 79
       },
       {
         "title": "Before any referral link goes live: terms accepted by you, \"Ad\" wording approved; then ask the agent to un-hide that tool's #adslot.",
@@ -2338,10 +2347,10 @@
         "urgency": "low",
         "due": null,
         "source": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-        "rank": 79
+        "rank": 80
       }
     ],
-    "count": 79,
+    "count": 80,
     "superseded_hidden": [
       {
         "title": "Create the GoatCounter account",
@@ -2359,7 +2368,7 @@
     "title_en": "How the business is doing",
     "subtitle_ro": "Doar cifre verificate. Proiecțiile nu sunt bani câștigați.",
     "subtitle_en": "VERIFIED figures only. Projections are not earned.",
-    "last_updated": "2026-10-07T15:15:37+01:00",
+    "last_updated": "2026-10-07T15:17:45+01:00",
     "last_updated_label_ro": "Ultima actualizare",
     "last_updated_label_en": "Last updated",
     "timezone": "Europe/London",
@@ -2485,7 +2494,7 @@
             "label": "FACT"
           }
         ],
-        "as_of": "2026-10-07T15:15:37+01:00",
+        "as_of": "2026-10-07T15:17:45+01:00",
         "source": "HTTP probe of tidy-ledger-guides-uk gift URLs"
       },
       "tiktok": {
@@ -2580,7 +2589,7 @@
         "now": [
           {
             "title": "TikTok funnel leak (VERIFIED 15:10 BST 7 Oct):",
-            "detail": "@ukgiftsfinds has no clickable profile link and no live page held the clip products → TikTok views could not become Amazon clicks. In progress: /ukgiftfinds/tiktok/ page + index card (background worker) and profile webs…"
+            "detail": "@ukgiftsfinds has no clickable profile link and no live page held the clip products → TikTok views could not become Amazon clicks. DONE: /ukgiftfinds/tiktok/ page LIVE (VERIFIED) + index card; Silentnight deal clip LIVE…"
           },
           {
             "title": "Daily Top-20, Wed 7 Oct (VERIFIED live 14:40 BST):",
@@ -2772,14 +2781,14 @@
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Payhip active products",
-      "detail": "As of 2026-10-05 20:46 (42 h old; limit 24 h).",
+      "detail": "As of 2026-10-05 20:46 (43 h old; limit 24 h).",
       "source": "METRICS.md dashboard read 5 Oct 20:46 BST (1–5 Oct views); kill date E15/E16 12 Oct"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Payhip store views",
-      "detail": "As of 2026-10-05 20:46 (42 h old; limit 24 h).",
+      "detail": "As of 2026-10-05 20:46 (43 h old; limit 24 h).",
       "source": "METRICS.md dashboard read 5 Oct 20:46 BST (1–5 Oct views); kill date E15/E16 12 Oct"
     },
     {
@@ -3006,19 +3015,19 @@
     },
     {
       "file": "BUSINESS_CONTROL_CENTER/WORK_LOG.md",
-      "modified": "2026-10-07T15:15:19+01:00"
+      "modified": "2026-10-07T15:16:51+01:00"
     },
     {
       "file": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
-      "modified": "2026-10-06T21:31:06+01:00"
+      "modified": "2026-10-07T15:16:51+01:00"
     },
     {
       "file": "BUSINESS_CONTROL_CENTER/WORK_QUEUE.md",
-      "modified": "2026-10-07T15:07:39+01:00"
+      "modified": "2026-10-07T15:16:51+01:00"
     },
     {
       "file": "BUSINESS_CONTROL_CENTER/CURRENT_WORK.md",
-      "modified": "2026-10-07T15:15:19+01:00"
+      "modified": "2026-10-07T15:16:51+01:00"
     },
     {
       "file": "BUSINESS_CONTROL_CENTER/OPPORTUNITIES.md",
@@ -3046,7 +3055,7 @@
     },
     {
       "file": "export/LAST_SCAN.txt",
-      "modified": "2026-10-07T14:41:51+01:00"
+      "modified": "2026-10-07T15:15:40+01:00"
     },
     {
       "file": "HUMAN_STEPS.md",
@@ -3058,10 +3067,10 @@
     },
     {
       "file": "BUSINESS_CONTROL_CENTER/START_HERE.md",
-      "modified": "2026-10-06T21:31:06+01:00"
+      "modified": "2026-10-07T15:17:45+01:00"
     }
   ],
   "link_policy": "Payhip, Fiverr, Quora, Reddit and LinkedIn return 403 to the box: shown as 'not checkable from box', never as broken.",
   "data_rules": "UNKNOWN means not measured; it is never shown as 0. Every metric carries label FACT, ESTIMATE or UNKNOWN, a source and an as_of time.",
-  "content_sha256_16": "cf059360542cf2a6"
+  "content_sha256_16": "8d9e195a1b4adcad"
 }

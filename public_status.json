@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-07T15:15:31+01:00",
-  "generated_epoch": 1791382531,
+  "generated_at": "2026-10-07T15:15:37+01:00",
+  "generated_epoch": 1791382537,
   "generated_by": "brain/build_snapshot.py",
   "timezone": "Europe/London",
   "freshness": {
@@ -34,7 +34,7 @@
     "timezone": "Europe/London",
     "label": "FACT",
     "source": "Challenge definition: 2 Oct 2026 = Day 1, Day 30 = 31 Oct 2026 (CEO command / Catalin)",
-    "as_of": "2026-10-07T15:15:31+01:00",
+    "as_of": "2026-10-07T15:15:37+01:00",
     "note": "The page recomputes the day number from the browser clock."
   },
   "metrics": {
@@ -302,7 +302,7 @@
       "value": null,
       "label": "UNKNOWN",
       "source": "GoatCounter (live ~08:31 2 Oct)",
-      "as_of": "2026-10-07T15:15:31+01:00",
+      "as_of": "2026-10-07T15:15:37+01:00",
       "stale_after_hours": 24,
       "note": "Public counts are not enabled by the owner, so stats need a login (not used here). First real baseline planned Sun 4 Oct; the figure then goes into DASHBOARD.md §5."
     },
@@ -311,7 +311,7 @@
       "value": null,
       "label": "UNKNOWN",
       "source": "GoatCounter events",
-      "as_of": "2026-10-07T15:15:31+01:00",
+      "as_of": "2026-10-07T15:15:37+01:00",
       "stale_after_hours": 24,
       "note": "Needs a GoatCounter events read; counter live ~08:31 2 Oct"
     },
@@ -320,7 +320,7 @@
       "value": null,
       "label": "UNKNOWN",
       "source": "GoatCounter events",
-      "as_of": "2026-10-07T15:15:31+01:00",
+      "as_of": "2026-10-07T15:15:37+01:00",
       "stale_after_hours": 24,
       "note": "Needs a GoatCounter events read (payhip_click events)"
     }
@@ -570,7 +570,7 @@
       "state": "warn",
       "headline": "Counter tag found on 7 of 7 sites probed; visitor numbers UNKNOWN (not readable without login)",
       "evidence": "Live HTML check at 15:15. Deployed ~08:31 per WORK_LOG. First data read planned Sun 4 Oct.",
-      "as_of": "2026-10-07T15:15:31+01:00",
+      "as_of": "2026-10-07T15:15:37+01:00",
       "source": "Live HTML of the Netlify sites + WORK_LOG"
     },
     {
@@ -579,7 +579,7 @@
       "state": "ok",
       "headline": "7 of 7 sites and 15 of 15 hub pages return HTTP 200",
       "evidence": "Probed from the box at 15:15. Credits left about 165 of 300 (estimate); each production deploy costs about 15.",
-      "as_of": "2026-10-07T15:15:31+01:00",
+      "as_of": "2026-10-07T15:15:37+01:00",
       "source": "HTTP probe of every site and hub page"
     },
     {
@@ -638,7 +638,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -649,7 +649,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -660,7 +660,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -671,7 +671,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -682,7 +682,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -693,7 +693,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -704,7 +704,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       }
     ],
@@ -715,7 +715,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -724,7 +724,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -733,7 +733,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -742,7 +742,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -751,7 +751,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -760,7 +760,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -769,7 +769,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -778,7 +778,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -787,7 +787,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -796,7 +796,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -805,7 +805,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -814,7 +814,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -823,7 +823,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -832,7 +832,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -841,7 +841,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       }
     ],
@@ -855,7 +855,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -867,7 +867,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -879,7 +879,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -891,7 +891,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -903,7 +903,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -915,7 +915,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -927,7 +927,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -939,7 +939,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -951,7 +951,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -963,7 +963,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -975,7 +975,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -987,7 +987,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -999,7 +999,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -1011,7 +1011,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       }
     ],
@@ -1022,7 +1022,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -1031,7 +1031,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -1040,7 +1040,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -1049,7 +1049,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       }
     ],
@@ -1061,7 +1061,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -1071,7 +1071,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -1081,7 +1081,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -1091,7 +1091,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -1101,7 +1101,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -1111,7 +1111,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -1121,7 +1121,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -1131,7 +1131,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -1141,7 +1141,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       }
     ],
@@ -1152,7 +1152,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -1161,7 +1161,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       },
       {
@@ -1170,7 +1170,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-07T15:15:31+01:00"
+          "checked_at": "2026-10-07T15:15:37+01:00"
         }
       }
     ],
@@ -2359,7 +2359,7 @@
     "title_en": "How the business is doing",
     "subtitle_ro": "Doar cifre verificate. Proiecțiile nu sunt bani câștigați.",
     "subtitle_en": "VERIFIED figures only. Projections are not earned.",
-    "last_updated": "2026-10-07T15:15:31+01:00",
+    "last_updated": "2026-10-07T15:15:37+01:00",
     "last_updated_label_ro": "Ultima actualizare",
     "last_updated_label_en": "Last updated",
     "timezone": "Europe/London",
@@ -2485,7 +2485,7 @@
             "label": "FACT"
           }
         ],
-        "as_of": "2026-10-07T15:15:31+01:00",
+        "as_of": "2026-10-07T15:15:37+01:00",
         "source": "HTTP probe of tidy-ledger-guides-uk gift URLs"
       },
       "tiktok": {

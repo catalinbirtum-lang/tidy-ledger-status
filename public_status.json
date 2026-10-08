@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-08T00:32:37+01:00",
-  "generated_epoch": 1791415957,
+  "generated_at": "2026-10-08T01:54:04+01:00",
+  "generated_epoch": 1791420844,
   "generated_by": "brain/build_snapshot.py",
   "timezone": "Europe/London",
   "freshness": {
@@ -34,7 +34,7 @@
     "timezone": "Europe/London",
     "label": "FACT",
     "source": "Challenge definition: 2 Oct 2026 = Day 1, Day 30 = 31 Oct 2026 (CEO command / Catalin)",
-    "as_of": "2026-10-08T00:32:37+01:00",
+    "as_of": "2026-10-08T01:54:04+01:00",
     "note": "The page recomputes the day number from the browser clock."
   },
   "metrics": {
@@ -302,7 +302,7 @@
       "value": null,
       "label": "UNKNOWN",
       "source": "GoatCounter (live ~08:31 2 Oct)",
-      "as_of": "2026-10-08T00:32:37+01:00",
+      "as_of": "2026-10-08T01:54:04+01:00",
       "stale_after_hours": 24,
       "note": "Public counts are not enabled by the owner, so stats need a login (not used here). First real baseline planned Sun 4 Oct; the figure then goes into DASHBOARD.md §5."
     },
@@ -311,7 +311,7 @@
       "value": null,
       "label": "UNKNOWN",
       "source": "GoatCounter events",
-      "as_of": "2026-10-08T00:32:37+01:00",
+      "as_of": "2026-10-08T01:54:04+01:00",
       "stale_after_hours": 24,
       "note": "Needs a GoatCounter events read; counter live ~08:31 2 Oct"
     },
@@ -320,7 +320,7 @@
       "value": null,
       "label": "UNKNOWN",
       "source": "GoatCounter events",
-      "as_of": "2026-10-08T00:32:37+01:00",
+      "as_of": "2026-10-08T01:54:04+01:00",
       "stale_after_hours": 24,
       "note": "Needs a GoatCounter events read (payhip_click events)"
     }
@@ -541,7 +541,7 @@
     ],
     "history_source": "export/ceo/state.tsv",
     "last_bridge_check": [
-      "2026-10-08 00:32:13 BST",
+      "2026-10-08 01:53:37 BST",
       "CHECKED"
     ]
   },
@@ -551,17 +551,17 @@
       "name": "GitHub bridge (private reports repo)",
       "state": "ok",
       "headline": "CEO command channel reachable at last check; export scan PASS; push enabled",
-      "evidence": "Last bridge check: 2026-10-08 00:32:13 BST. Last push commit: 2026-10-08T00:02:43+01:00. Last export scan: 2026-10-08T00:02:42+01:00.",
-      "as_of": "2026-10-08T00:02:42+01:00",
+      "evidence": "Last bridge check: 2026-10-08 01:53:37 BST. Last push commit: 2026-10-08T00:32:42+01:00. Last export scan: 2026-10-08T00:32:41+01:00.",
+      "as_of": "2026-10-08T00:32:41+01:00",
       "source": "export/ceo/check_log.txt, export/LAST_SCAN.txt, export/repo git log"
     },
     {
       "id": "scheduled_sync",
       "name": "Scheduled sync (08:10, 11:10, 14:10, 17:10, 20:10 UK)",
       "state": "ok",
-      "headline": "Last export Thu 00:02; schedule 08:10, 11:10, 14:10, 17:10, 20:10 UK daily",
+      "headline": "Last export Thu 00:32; schedule 08:10, 11:10, 14:10, 17:10, 20:10 UK daily",
       "evidence": "Last expected slot Wed 20:10; next Thu 08:10. No slot missed.",
-      "as_of": "2026-10-08T00:02:42+01:00",
+      "as_of": "2026-10-08T00:32:41+01:00",
       "source": "export/LAST_SCAN.txt vs the schedule (inferred from the last scan time; the scheduler itself is not directly observable)"
     },
     {
@@ -569,8 +569,8 @@
       "name": "Analytics (GoatCounter)",
       "state": "warn",
       "headline": "Counter tag found on 7 of 7 sites probed; visitor numbers UNKNOWN (not readable without login)",
-      "evidence": "Live HTML check at 00:32. Deployed ~08:31 per WORK_LOG. First data read planned Sun 4 Oct.",
-      "as_of": "2026-10-08T00:32:37+01:00",
+      "evidence": "Live HTML check at 01:54. Deployed ~08:31 per WORK_LOG. First data read planned Sun 4 Oct.",
+      "as_of": "2026-10-08T01:54:04+01:00",
       "source": "Live HTML of the Netlify sites + WORK_LOG"
     },
     {
@@ -578,8 +578,8 @@
       "name": "Netlify sites",
       "state": "ok",
       "headline": "7 of 7 sites and 15 of 15 hub pages return HTTP 200",
-      "evidence": "Probed from the box at 00:32. Credits left about 165 of 300 (estimate); each production deploy costs about 15.",
-      "as_of": "2026-10-08T00:32:37+01:00",
+      "evidence": "Probed from the box at 01:54. Credits left about 165 of 300 (estimate); each production deploy costs about 15.",
+      "as_of": "2026-10-08T01:54:04+01:00",
       "source": "HTTP probe of every site and hub page"
     },
     {
@@ -638,7 +638,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -649,7 +649,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -660,7 +660,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -671,7 +671,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -682,7 +682,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -693,7 +693,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -704,7 +704,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       }
     ],
@@ -715,7 +715,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -724,7 +724,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -733,7 +733,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -742,7 +742,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -751,7 +751,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -760,7 +760,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -769,7 +769,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -778,7 +778,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -787,7 +787,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -796,7 +796,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -805,7 +805,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -814,7 +814,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -823,7 +823,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -832,7 +832,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -841,7 +841,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       }
     ],
@@ -855,7 +855,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -867,7 +867,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -879,7 +879,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -891,7 +891,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -903,7 +903,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -915,7 +915,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -927,7 +927,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -939,7 +939,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -951,7 +951,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -963,7 +963,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -975,7 +975,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -987,7 +987,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -999,7 +999,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -1011,7 +1011,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       }
     ],
@@ -1022,7 +1022,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -1031,7 +1031,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -1040,7 +1040,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -1049,7 +1049,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       }
     ],
@@ -1061,7 +1061,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -1071,7 +1071,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -1081,7 +1081,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -1091,7 +1091,7 @@
         "link_check": {
           "state": "none",
           "http": null,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -1101,7 +1101,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -1111,7 +1111,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -1121,7 +1121,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -1131,7 +1131,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -1141,7 +1141,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       }
     ],
@@ -1152,7 +1152,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -1161,7 +1161,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       },
       {
@@ -1170,7 +1170,7 @@
         "link_check": {
           "state": "ok",
           "http": 200,
-          "checked_at": "2026-10-08T00:32:37+01:00"
+          "checked_at": "2026-10-08T01:54:04+01:00"
         }
       }
     ],
@@ -2368,7 +2368,7 @@
     "title_en": "How the business is doing",
     "subtitle_ro": "Doar cifre verificate. Proiecțiile nu sunt bani câștigați.",
     "subtitle_en": "VERIFIED figures only. Projections are not earned.",
-    "last_updated": "2026-10-08T00:32:37+01:00",
+    "last_updated": "2026-10-08T01:54:04+01:00",
     "last_updated_label_ro": "Ultima actualizare",
     "last_updated_label_en": "Last updated",
     "timezone": "Europe/London",
@@ -2494,7 +2494,7 @@
             "label": "FACT"
           }
         ],
-        "as_of": "2026-10-08T00:32:37+01:00",
+        "as_of": "2026-10-08T01:54:04+01:00",
         "source": "HTTP probe of tidy-ledger-guides-uk gift URLs"
       },
       "tiktok": {
@@ -2760,168 +2760,168 @@
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Sales (orders)",
-      "detail": "As of 2026-10-02 07:53 (137 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 07:53 (138 h old; limit 24 h).",
       "source": "Payhip orders + Fiverr orders (DASHBOARD.md §5)"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Customers",
-      "detail": "As of 2026-10-02 07:53 (137 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 07:53 (138 h old; limit 24 h).",
       "source": "One customer per paid order; 0 orders => 0 customers (Payhip + Fiverr)"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Genuine leads",
-      "detail": "As of 2026-10-02 07:53 (137 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 07:53 (138 h old; limit 24 h).",
       "source": "START_HERE.md / METRICS.md (consented enquiries; spam excluded)"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Payhip active products",
-      "detail": "As of 2026-10-05 20:46 (52 h old; limit 24 h).",
+      "detail": "As of 2026-10-05 20:46 (53 h old; limit 24 h).",
       "source": "METRICS.md dashboard read 5 Oct 20:46 BST (1–5 Oct views); kill date E15/E16 12 Oct"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Payhip store views",
-      "detail": "As of 2026-10-05 20:46 (52 h old; limit 24 h).",
+      "detail": "As of 2026-10-05 20:46 (53 h old; limit 24 h).",
       "source": "METRICS.md dashboard read 5 Oct 20:46 BST (1–5 Oct views); kill date E15/E16 12 Oct"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Payhip visits",
-      "detail": "As of 2026-10-02 07:53 (137 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 07:53 (138 h old; limit 24 h).",
       "source": "Payhip dashboard via DASHBOARD.md §5 snapshot row 2026-10-02 07:53–07:57 (real dashboard reads)"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Payhip orders",
-      "detail": "As of 2026-10-02 09:52 (135 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 09:52 (136 h old; limit 24 h).",
       "source": "Payhip dashboard via metrics.md 'Sales/orders check' (routine)"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Amazon Associates clicks",
-      "detail": "As of 2026-10-05 22:24 (50 h old; limit 24 h).",
+      "detail": "As of 2026-10-05 22:24 (52 h old; limit 24 h).",
       "source": "Amazon Associates Central UK dashboard (owner screen read 5 Oct 2026 22:24 BST)"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Amazon Associates ordered items",
-      "detail": "As of 2026-10-05 22:24 (50 h old; limit 24 h).",
+      "detail": "As of 2026-10-05 22:24 (52 h old; limit 24 h).",
       "source": "Amazon Associates Central UK dashboard (owner screen read 5 Oct 2026 22:24 BST)"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Amazon Associates earnings",
-      "detail": "As of 2026-10-05 22:24 (50 h old; limit 24 h).",
+      "detail": "As of 2026-10-05 22:24 (52 h old; limit 24 h).",
       "source": "Amazon Associates Central UK dashboard (owner screen read 5 Oct 2026 22:24 BST)"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: YouTube views (28 days)",
-      "detail": "As of 2026-10-02 07:53 (137 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 07:53 (138 h old; limit 24 h).",
       "source": "YouTube Studio 28d via DASHBOARD.md §5 snapshot row 2026-10-02 07:53–07:57 (real dashboard reads)"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: YouTube Shorts live",
-      "detail": "As of 2026-10-02 07:53 (137 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 07:53 (138 h old; limit 24 h).",
       "source": "ASSETS.md §4 table (rows) / METRICS.md"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Pinterest boards",
-      "detail": "As of 2026-10-02 07:53 (137 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 07:53 (138 h old; limit 24 h).",
       "source": "Profile count via DASHBOARD.md (reconciled 07:57)"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Pinterest pins",
-      "detail": "As of 2026-10-02 07:53 (137 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 07:53 (138 h old; limit 24 h).",
       "source": "Profile count via DASHBOARD.md (reconciled 07:57)"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Pinterest impressions (30 days)",
-      "detail": "As of 2026-10-02 07:53 (137 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 07:53 (138 h old; limit 24 h).",
       "source": "Pinterest Analytics 30d via DASHBOARD.md §5 snapshot row 2026-10-02 07:53–07:57 (real dashboard reads)"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Pinterest outbound clicks (30 days)",
-      "detail": "As of 2026-10-02 07:53 (137 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 07:53 (138 h old; limit 24 h).",
       "source": "Pinterest Analytics 30d via DASHBOARD.md §5 snapshot row 2026-10-02 07:53–07:57 (real dashboard reads)"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Fiverr gigs",
-      "detail": "As of 2026-10-02 07:53 (137 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 07:53 (138 h old; limit 24 h).",
       "source": "ASSETS.md §3 table (rows); DASHBOARD.md: 4 gigs"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Fiverr impressions (30 days)",
-      "detail": "As of 2026-10-02 07:53 (137 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 07:53 (138 h old; limit 24 h).",
       "source": "Fiverr dashboard 30d via DASHBOARD.md §5 snapshot row 2026-10-02 07:53–07:57 (real dashboard reads)"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Fiverr orders",
-      "detail": "As of 2026-10-02 07:53 (137 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 07:53 (138 h old; limit 24 h).",
       "source": "Fiverr dashboard 30d via DASHBOARD.md §5 snapshot row 2026-10-02 07:53–07:57 (real dashboard reads)"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Search Console pages discovered",
-      "detail": "As of 2026-10-02 07:53 (137 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 07:53 (138 h old; limit 24 h).",
       "source": "Search Console sitemap status via DASHBOARD.md E11 row"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Bing URLs discovered",
-      "detail": "As of 2026-10-02 07:53 (137 h old; limit 24 h).",
+      "detail": "As of 2026-10-02 07:53 (138 h old; limit 24 h).",
       "source": "Bing Webmaster Tools via DASHBOARD.md E11 row"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Netlify sites live",
-      "detail": "As of 2026-10-06 21:31 (27 h old; limit 24 h).",
+      "detail": "As of 2026-10-06 21:31 (28 h old; limit 24 h).",
       "source": "ASSETS.md §1 table; liveness probed in system health"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Guides hub pages",
-      "detail": "As of 2026-10-06 21:31 (27 h old; limit 24 h).",
+      "detail": "As of 2026-10-06 21:31 (28 h old; limit 24 h).",
       "source": "ASSETS.md §1a table"
     },
     {
       "severity": "medium",
       "category": "stale_data",
       "title": "Stale metric: Netlify credits left (month)",
-      "detail": "As of 2026-10-02 08:31 (136 h old; limit 72 h).",
+      "detail": "As of 2026-10-02 08:31 (137 h old; limit 72 h).",
       "source": "metrics.md deploy note ('~165/300'); each production deploy costs ~15 credits"
     },
     {
@@ -3029,7 +3029,7 @@
     },
     {
       "file": "BUSINESS_CONTROL_CENTER/WORK_LOG.md",
-      "modified": "2026-10-08T00:32:34+01:00"
+      "modified": "2026-10-08T01:54:00+01:00"
     },
     {
       "file": "BUSINESS_CONTROL_CENTER/HUMAN_ACTION_QUEUE.md",
@@ -3057,19 +3057,19 @@
     },
     {
       "file": "export/ceo/CEO_COMMANDS.latest.md",
-      "modified": "2026-10-08T00:32:13+01:00"
+      "modified": "2026-10-08T01:53:37+01:00"
     },
     {
       "file": "export/ceo/state.tsv",
-      "modified": "2026-10-08T00:32:13+01:00"
+      "modified": "2026-10-08T01:53:37+01:00"
     },
     {
       "file": "export/ceo/check_log.txt",
-      "modified": "2026-10-08T00:32:13+01:00"
+      "modified": "2026-10-08T01:53:37+01:00"
     },
     {
       "file": "export/LAST_SCAN.txt",
-      "modified": "2026-10-08T00:02:42+01:00"
+      "modified": "2026-10-08T00:32:41+01:00"
     },
     {
       "file": "HUMAN_STEPS.md",
@@ -3086,5 +3086,5 @@
   ],
   "link_policy": "Payhip, Fiverr, Quora, Reddit and LinkedIn return 403 to the box: shown as 'not checkable from box', never as broken.",
   "data_rules": "UNKNOWN means not measured; it is never shown as 0. Every metric carries label FACT, ESTIMATE or UNKNOWN, a source and an as_of time.",
-  "content_sha256_16": "3ccca9f1adf989b8"
+  "content_sha256_16": "67ab07206bc9977f"
 }
